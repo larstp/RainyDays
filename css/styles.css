@@ -1,0 +1,136 @@
+@font-face {
+  font-family: "Montserrat";
+  src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
+    format("truetype");
+}
+
+@font-face {
+  font-family: "Tittillium Web";
+  src: url("../fonts/Titillium_Web/TitilliumWeb-Regular.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Palanquin";
+  src: url("../fonts/Palanquin/Palanquin-Regular.ttf") format("truetype");
+}
+
+html {
+  background-color: #ebebeb;
+}
+
+header {
+  background-color: #d9d9d9;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+nav {
+  margin: 20px;
+  display: none;
+  position: fixed;
+  top: 46px;
+  z-index: 1000;
+  left: 0px;
+}
+
+ul {
+  list-style-type: none;
+  text-decoration: none;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ nav {
+  display: block;
+}
+
+h1,
+h2,
+h3 {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+  font-weight: 400;
+  padding: 0% 15% 0% 15%;
+}
+
+h1 {
+  text-align: center;
+}
+
+p {
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.current {
+  text-decoration: underline;
+  font-weight: 600;
+}
+
+.logo-only {
+  max-width: 80px;
+  max-height: 34px;
+}
+
+.top-footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  background-color: #4f7a80;
+  color: #fff;
+}
+
+.top-footer img {
+  max-width: 80px;
+}
+
+.bottom-footer {
+  padding: 10px;
+  background-color: #ebebeb;
+  color: #000000;
+}
+
+.cta {
+  background-color: #0b3a40;
+  color: white;
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding: 10px 40px;
+  border-radius: 20px;
+  max-width: 100px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+}
+
+.video-banner {
+  height: 100px;
+  width: 100%;
+  position: relative;
+}
+
+.video-banner > video {
+  object-fit: cover;
+  height: 100%;
+  width: 100%;
+}
+
+.video-banner-content {
+  position: absolute;
+  inset: 0;
+  padding: 1rem;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  z-index: 2;
+  color: white;
+  text-shadow: 0 0 10px black;
+  font-size: 2rem;
+}
