@@ -1,0 +1,65 @@
+.video-banner {
+  height: 220px;
+  width: 300px;
+  position: relative;
+  margin: auto;
+  overflow: hidden;
+}
+
+.video-banner > video {
+  object-fit: cover;
+  height: 90%;
+  width: 100%;
+  border-radius: 10%;
+  overflow: hidden;
+  filter: brightness(70%);
+}
+
+.video-banner-content {
+  display: grid;
+  position: absolute;
+  inset: 0;
+  padding: 0.9rem;
+  align-items: center;
+  z-index: 2;
+  color: white;
+  text-shadow: 0 0 10px black;
+  max-width: 120px;
+  max-height: 150px;
+}
+
+.video-logo {
+  max-width: 85px;
+  position: absolute;
+  grid-column: 2;
+  z-index: 2;
+  padding-left: 30px;
+}
+
+/* How do I make the top part of the white triangle rounded? Aaaaaah! */
+.video-background {
+  max-width: 200px;
+  position: absolute;
+  grid-column: 2;
+  z-index: 1;
+  max-height: 190px;
+}
+
+.subscribe-text {
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: 0.8em;
+  text-align: left;
+  max-width: 18ch;
+  min-width: 18ch;
+  padding-bottom: 5px;
+}
+
+.subscribe-heading {
+  font-weight: 600;
+  font-size: large;
+  padding-bottom: 10px;
+}
+
+.newsletter {
+  padding-bottom: 70px;
+}

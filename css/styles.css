@@ -18,6 +18,10 @@ html {
   background-color: #ebebeb;
 }
 
+body {
+  margin: 0;
+}
+
 header {
   background-color: #d9d9d9;
   padding: 10px;
@@ -50,7 +54,8 @@ ul {
 
 h1,
 h2,
-h3 {
+h3,
+span {
   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   font-size: 0.8em;
   font-weight: 400;
@@ -104,33 +109,24 @@ p {
   text-wrap: nowrap;
   padding: 10px 40px;
   border-radius: 20px;
-  max-width: 100px;
+  max-width: 1000px;
   margin: auto;
   position: relative;
   display: inline-block;
 }
 
-.video-banner {
-  height: 100px;
-  width: 100%;
-  position: relative;
-}
-
-.video-banner > video {
-  object-fit: cover;
-  height: 100%;
-  width: 100%;
-}
-
-.video-banner-content {
-  position: absolute;
-  inset: 0;
-  padding: 1rem;
-  text-align: center;
-  display: flex;
-  align-items: center;
-  z-index: 2;
+.cta__orange {
+  background-color: #5e2c07;
   color: white;
-  text-shadow: 0 0 10px black;
-  font-size: 2rem;
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding: 10px 40px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
 }

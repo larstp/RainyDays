@@ -31,7 +31,7 @@
 
 .keep-browsing {
   display: grid;
-  padding: 20px;
+  padding-bottom: 70px;
 }
 .keep-browsing h2 {
   text-align: center;
@@ -58,8 +58,8 @@
   display: grid;
   gap: 10px;
   text-align: center;
+  padding-bottom: 70px;
 }
-
 .pets img {
   max-width: 8em;
   border-radius: 50%;
