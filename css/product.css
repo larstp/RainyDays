@@ -1,11 +1,15 @@
 .products {
-  background-color: #ebebeb;
   display: grid;
   grid-template-columns: 1fr auto;
   align-items: center;
 }
 
 .products img {
+  grid-column: -1/1;
+  margin: auto;
+}
+
+.products a {
   grid-column: -1/1;
   margin: auto;
 }
@@ -19,8 +23,9 @@
 
 .products p {
   grid-column: 2;
-  font-size: 0.8em;
+  font-size: 1.1em;
   padding-left: 15%;
+  color: #0b3a40;
 }
 
 .featured {

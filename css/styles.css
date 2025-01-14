@@ -71,6 +71,15 @@ nav ul {
   color: #fff;
   text-align: left;
   font-size: large;
+  padding-left: 5px;
+}
+
+.hamburger-text__signup {
+  font-size: small;
+  color: #fff;
+  text-align: center;
+  padding-right: 6%;
+  align-items: center;
 }
 
 h1,
@@ -99,7 +108,8 @@ a {
   color: #000000;
 }
 
-p {
+p,
+span {
   font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
 }
 
