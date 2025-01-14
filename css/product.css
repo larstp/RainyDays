@@ -22,3 +22,16 @@
   font-size: 0.8em;
   padding-left: 15%;
 }
+
+.featured {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 465px;
+  margin: 50px auto;
+  gap: 10px;
+}
+
+.featured img {
+  max-width: 8em;
+  max-height: 140px;
+}

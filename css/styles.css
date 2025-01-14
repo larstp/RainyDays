@@ -83,6 +83,12 @@ span {
   padding: 0% 15% 0% 15%;
 }
 
+h1 {
+  font-size: x-large;
+  padding: 20px;
+  text-align: center;
+}
+
 li,
 a {
   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
@@ -91,10 +97,6 @@ a {
   list-style-type: none;
   text-decoration: none;
   color: #000000;
-}
-
-h1 {
-  text-align: center;
 }
 
 p {
@@ -123,6 +125,8 @@ p {
 }
 
 .top-footer img {
+  display: block;
+  margin: auto;
   max-width: 80px;
   grid-column: 2;
   padding-left: 30px;
@@ -190,4 +194,8 @@ p {
   margin: auto;
   position: relative;
   display: inline-block;
+}
+
+.cta__send {
+  padding: 40px 0 40px 0;
 }

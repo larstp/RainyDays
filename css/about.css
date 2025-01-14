@@ -1,0 +1,20 @@
+.about-text {
+  padding: 0 10% 10% 10%;
+}
+
+.about-text h2 {
+  font-size: 1.5em;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.about-text p {
+  line-height: 1.5em;
+}
+
+.about-text a {
+  display: block;
+  text-align: center;
+  max-width: fit-content;
+}

@@ -1,0 +1,96 @@
+label {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+}
+
+input,
+select,
+textarea {
+  border: 1px solid #e8e8e8;
+  border-radius: 5px;
+  margin: 10px 10px 10px 0px;
+  padding: 10px;
+}
+
+form {
+  display: flex;
+  justify-content: center;
+}
+
+.contact {
+  max-width: 1000px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+.contact__fieldset {
+  border: #fff;
+  display: flex;
+  text-align: left;
+  flex-direction: column;
+  background: #fff;
+  padding: 20px;
+  border-radius: 25px;
+}
+
+.contact__fieldset > * {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.contact a {
+  display: block;
+  text-align: center;
+  max-width: fit-content;
+}
+
+p {
+  padding: 0 40px 0 40px;
+  font-size: x-large;
+}
+
+h2 {
+  font-size: 1.9em;
+  text-align: left;
+}
+
+.contact-text {
+  text-align: left;
+  max-width: 90ch;
+  margin: auto;
+}
+
+.contact-image {
+  max-width: 80%;
+  margin: auto;
+  display: block;
+  border-radius: 25px;
+}
+
+iframe {
+  border-radius: 25px;
+  grid-column: -1/1;
+  margin: auto;
+  max-width: 150px;
+  max-height: 150px;
+}
+
+.contact-maps {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 465px;
+  margin: 50px auto;
+  gap: 31px;
+}
+
+.map-specific {
+  background-color: #ebebeb;
+  display: grid;
+}
+
+.map-specific p,
+h2 {
+  max-width: 15ch;
+  text-align: left;
+  padding: 0 5% 0 5%;
+}

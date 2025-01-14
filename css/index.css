@@ -12,21 +12,8 @@
   padding: 20px;
 }
 
-.featured {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 1000px;
-  margin: 50px auto;
-  gap: 10px;
-}
-
-.featured img {
-  max-width: 8em;
-  max-height: 140px;
-}
-
-.featured h2 {
-  grid-column: -1/1;
+.tagline h2 {
+  text-align: center;
 }
 
 .keep-browsing {
