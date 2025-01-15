@@ -35,6 +35,11 @@ a {
   color: black;
 }
 
+h3 {
+  padding-left: 20px;
+  font-size: large;
+}
+
 input,
 select,
 textarea {
@@ -58,13 +63,47 @@ hr {
   padding: 0;
 }
 
-.cart {
+/*I've tried for hours to space this evenly but I can't get it to work. This is a temp solution*/
+.visa {
+  padding-right: 50px;
+}
+
+.round-checkbox {
+  width: 1em;
+  height: 1em;
+  background-color: white;
+  border-radius: 50%;
+  border: 1px solid #000000;
+  appearance: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.round-checkbox:checked {
+  background-color: #0b3a40;
+}
+
+.checkbox-placement {
+  padding-left: 100px;
+}
+
+.checkout-heading {
+  text-align: left;
+}
+
+.checkout-heading a,
+.checkout-heading h2 {
+  color: black;
+  font-size: medium;
+}
+
+.checkout {
   max-width: 1000px;
   margin: 50px auto;
   text-align: center;
 }
 
-.cart__fieldset {
+.checkout__fieldset {
   border: #fff;
   display: flex;
   text-align: left;
@@ -76,41 +115,49 @@ hr {
   max-height: 850px;
 }
 
-.cart__fieldset > * {
+.checkout__fieldset > * {
   flex: 1;
   display: flex;
   flex-direction: column;
 }
 
-.cart-box {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  height: 90px;
-  padding: 5px 20px 5px 20px;
-  align-items: center;
-  align-self: stretch;
-  border-radius: 8px;
-  border: 1px solid #d0d5dd;
-  background: #f9fafb;
-}
-
 .product-picture {
   max-width: 100px;
-  max-height: 110px;
+  max-height: 55px;
   border-radius: 11%;
   background: #d9d9d9;
   margin: 5px;
 }
 
-.cart__all-items {
-  display: flex;
-  flex-direction: column;
-}
-
 .cart-item-container {
   display: flex;
   flex-direction: row;
+  align-items: center;
+  max-width: 178px;
+  max-height: 64px;
+}
+
+.checkout-choices {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.checkout-choices i {
+  font-size: xx-large;
+  padding: 10px 0 10px 0;
+}
+
+.checkout__info {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.checkout__info > * {
+  margin: 0;
+  max-width: 18ch;
 }
 
 .cart-item__info {
@@ -121,27 +168,11 @@ hr {
 .cart-item__info > * {
   margin: 0;
   max-width: 18ch;
-  font-size: medium;
-}
-
-.cart-item__quantity {
-  display: flex;
-  align-items: center;
-  justify-content: start;
-}
-
-.cart-item__quantity p {
-  padding: 4px;
+  font-size: 0.8em;
 }
 
 .size {
-  font-size: 0.8em;
-  color: black;
-  padding-top: 3px;
-}
-
-.price {
-  font-size: 1em;
+  font-size: 0.6em;
   color: black;
   padding-top: 3px;
 }
@@ -165,16 +196,17 @@ hr {
   font-weight: 600;
 }
 
-.cart__promo {
+.cart__link {
   display: flex;
   flex-direction: row;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
 }
 
-.cart__promo a {
+.cart__link a,
+.cart__link h2 {
   color: black;
+  font-size: medium;
 }
 
 .cta__checkout {
