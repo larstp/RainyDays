@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RainyDays | Payment Approved</title>
+    <title>RainyDays | Tech Fleece 70</title>
     <meta charset="UTF-8" />
-    <meta name="description" content="Thank you for shopping with us!" />
+    <meta
+      name="description"
+      content="Product page for Rainydays Tech Fleece 70"
+    />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
-    <link href="../css/style.css" rel="stylesheet" />
     <link href="../css/product.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
@@ -22,9 +24,9 @@
   <body>
     <header>
       <br />
-      <p>This is a pop-up</p>
+      <p class="pop-up">This is a pop-up</p>
       <section class="back-btn">
-        <a href="../index.html" class="cta">back</a>
+        <a href="../index.html" class="cta-add">back</a>
       </section>
     </header>
     <main>
@@ -34,21 +36,50 @@
             <a href="../index.html"><i class="fa-solid fa-angle-left"></i></a>
             <section class="content">
               <div>
-                <img src="../images/jackets/1- standard.png" />
+                <img
+                  src="../images/jackets/1- standard.png"
+                  alt="Rainydays Tech Fleece 70"
+                />
               </div>
-              <h1>Rainydays</h1>
-              <h2>Tech Fleece 70</h2>
-              <p>£219</p>
-              <i class="fa-regular fa-circle-check"></i>
-              <a href="../placeholders/back.html"
-                >Shipping, Exchanges & Returns</a
-              >
-              <div>
-                <a href="../index.html" class="cta">+ Add to cart</a>
+              <div class="product-info">
+                <h1>Rainydays</h1>
+                <h2>Tech Fleece 70</h2>
+                <h3>£219</h3>
+                <div class="colors-container">
+                  <h2>Colours</h2>
+                  <section class="colors">
+                    <a href="../placeholders/back.html" class="colors-one"
+                      ><i class="fa-solid fa-square"></i
+                    ></a>
+                    <a href="../placeholders/back.html" class="colors-two"
+                      ><i class="fa-solid fa-square"></i
+                    ></a>
+                    <a href="../placeholders/back.html" class="colors-three"
+                      ><i class="fa-solid fa-square"></i
+                    ></a>
+                    <a href="../placeholders/back.html" class="colors-four"
+                      ><i class="fa-solid fa-square"></i
+                    ></a>
+                    <a href="../placeholders/back.html" class="colors-five"
+                      ><i class="fa-solid fa-square"></i
+                    ></a>
+                  </section>
+                </div>
+                <a href="../placeholders/back.html"
+                  >Shipping, Exchanges & Returns</a
+                >
               </div>
               <section>
-                <i class="fa-regular fa-heart"></i>
-                <select name="guitars" id="guitars">
+                <a href="../pop-ups/cart.html" class="cta-add">+ Add to cart</a>
+              </section>
+              <section class="select-size">
+                <div>
+                  <input type="checkbox" id="like-btn" />
+                  <label for="like-btn"
+                    ><i class="fa-solid fa-heart"></i
+                  ></label>
+                </div>
+                <select name="sizes" id="sizes" class="cta-size">
                   <option value="Select">Select size</option>
                   <option value="Small">Small</option>
                   <option value="Medium">Medium</option>
@@ -56,17 +87,18 @@
                   <option value="Extra Large">Extra Large</option>
                 </select>
               </section>
-              <section>
-                <section>
-                    <i class="fa-regular fa-heart"></i>
-                    <select name="guitars" id="guitars">
-                      <option value="Heading">Details</option>
-                      <option value="Details">Material: Cotton, Polyester
-                        Fit: Loose
-                        Wash: Washing machine safe
-                        Dry: Air-Dry
-                        Article Number: LE222E030-Q11</option>
-                    </select>
+              <section class="details">
+                <label for="hamburger-menu" class="cta-details"
+                  ><i class="fa-solid fa-chevron-down"></i> Details</label
+                >
+                <input type="checkbox" id="hamburger-menu" />
+                <ul>
+                  <p>Material: Cotton, Polyester</p>
+                  <p>Fit: Loose</p>
+                  <p>Wash: Washing machine safe</p>
+                  <p>Dry: Air-Dry</p>
+                  <p>Article Number: LE222E030-Q11</p>
+                </ul>
               </section>
             </section>
           </div>

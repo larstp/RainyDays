@@ -4,36 +4,80 @@
   text-transform: uppercase;
 }
 
+.pop-up {
+  color: white;
+}
+
 body {
   background: black;
-  text-decoration: none;
 }
 
 h1 {
   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   color: #0b3a40;
-  text-align: center;
   font-size: x-large;
-  margin-top: 0;
+  margin: 0;
 }
 
 h2 {
   font-family: "Palanquin", Verdana, Geneva, Tahoma, sans-serif;
   font-size: large;
   font-weight: 400;
+  margin: 0;
 }
 
+h3 {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  font-size: x-large;
+  font-weight: 400;
+  margin: 0 0 10px 0;
+  color: #0b3a40;
+}
+
+p,
 a {
+  color: rgb(0, 0, 0);
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
   text-decoration: none;
-}
-
-p {
-  color: white;
 }
 
 form {
   display: flex;
   justify-content: center;
+}
+
+ul {
+  display: none;
+  border-radius: 20px;
+}
+
+ul p {
+  color: black;
+  text-align: left;
+  margin: 5px;
+  padding: 5px;
+}
+
+label {
+  font-size: small;
+}
+
+#hamburger-menu {
+  display: none;
+}
+
+#hamburger-menu:checked ~ ul {
+  display: block;
+  background: #d9d9d9;
+}
+
+#like-btn {
+  display: none;
+}
+
+#like-btn:checked ~ label {
+  color: red;
+  cursor: pointer;
 }
 
 .product {
@@ -71,19 +115,71 @@ form {
 }
 
 .content {
-  padding-top: 20%;
   text-align: center;
 }
 
-.content i {
-  font-size: xx-large;
+.content section {
+  padding-top: 10px;
+}
+
+.content img {
+  max-width: 80%;
+}
+
+/* Colour picker. Probably a way better way of doing this, but I don't think I should use much time on it */
+
+.colors-container {
+  display: grid;
+  grid-template-columns: 2 1fr;
+}
+
+.colors {
+  display: block;
+  margin: none;
+  grid-column: 2;
+}
+
+.colors-one {
+  color: #6d6244;
+}
+
+.colors-two {
+  color: #486a6d;
+}
+
+.colors-three {
+  color: #4d8238;
+}
+
+.colors-four {
+  color: #7e3563;
+}
+
+.colors-five {
+  color: #7f3737;
+}
+
+.product-info {
+  text-align: left;
+  padding-left: 65px;
 }
 
 .bottom {
   padding: 400px 0 10px 0;
 }
 
-.cta {
+.select-size {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  padding-left: 45px;
+}
+
+.select-size i {
+  font-size: x-large;
+}
+
+.cta-add {
   background-color: #0b3a40;
   color: white;
   font-size: 1em;
@@ -96,4 +192,39 @@ form {
   margin: auto;
   position: relative;
   display: inline-block;
+}
+
+.cta-size {
+  background-color: #f0f0f0;
+  border: #b4b4b4;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-wrap: nowrap;
+  align-items: center;
+  padding: 10px 65px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.cta-details {
+  background-color: #b4b4b4;
+  color: rgb(0, 0, 0);
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-wrap: nowrap;
+  align-items: center;
+  padding: 10px 115px;
+  border-radius: 20px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
+  cursor: pointer;
 }

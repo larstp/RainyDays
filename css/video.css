@@ -24,12 +24,12 @@
   z-index: 2;
   color: white;
   text-shadow: 0 0 10px black;
-  max-width: 120px;
+  max-width: 180px;
   max-height: 150px;
 }
 
 .video-logo {
-  max-width: 85px;
+  max-width: 70px;
   position: absolute;
   grid-column: 2;
   z-index: 2;

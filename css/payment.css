@@ -4,6 +4,10 @@
   text-transform: uppercase;
 }
 
+.pop-up {
+  color: white;
+}
+
 body {
   background: black;
   text-decoration: none;
