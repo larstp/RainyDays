@@ -41,6 +41,10 @@
   display: none;
 }
 
+.mid-filler {
+  display: none;
+}
+
 .pets {
   display: grid;
   gap: 10px;

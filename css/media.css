@@ -4,23 +4,346 @@
   }
 }
 
-@media (min-width: 800px) {
+@media (min-width: 1150px) {
+  .mobile {
+    display: none;
+  }
+
+  p {
+    font-size: 1.8em;
+    margin-top: 0;
+    font-weight: 550;
+  }
 
   nav {
     display: block;
     position: static;
   }
 
-  nav li {
-    display: inline-flex;
-    padding: 0px;
+  .header-text {
+    color: #000000;
+    text-align: left;
+    font-size: large;
+    padding-left: 5px;
   }
 
-  nav ul {
-    margin-block-start: 0;
-    margin-block-end: 0;
+  .desktop {
+    background-image: url(/images/background/full-large2.png);
+    background-size: cover;
+    background-position: center;
+    position: sticky;
+    top: 0;
+    z-index: 2000;
+  }
+
+  .desktop ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    padding: 40px 0 6% 0;
+    align-items: center;
+    margin: 0;
+  }
+
+  .header-logo {
+    max-width: 5em;
+  }
+
+  .header-left {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .header-right {
+    display: flex;
+    justify-content: space-around;
+  }
+
+  nav li {
+    padding: 0 60px 0 60px;
+  }
+
+  .desktop a {
+    font-size: 3em;
+  }
+
+  .tagline {
+    display: flex;
+    flex-direction: column;
+    margin: auto;
+    align-items: center;
+  }
+
+  .tagline img {
+    max-width: 90%;
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    padding: 20px;
+  }
+
+  .tagline h2 {
+    text-align: left;
+    font-size: xx-large;
+    max-width: 45ch;
+  }
+
+  .featured {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 50%;
+    margin: 50px auto;
+    gap: 10px;
+  }
+
+  .featured img {
+    max-width: 20em;
+    max-height: 50em;
+  }
+
+  .products {
+    display: block;
+    margin: auto;
+  }
+
+  .products h2 {
+    font-size: 2em;
+    color: #0b3a40;
+  }
+
+  .products h3 {
+    font-size: 1.5em;
+  }
+
+  .products p {
+    font-size: 2.2em;
+    padding-left: 30%;
+    color: #0b3a40;
+    margin-top: 0;
+    font-weight: 550;
+  }
+
+  .keep-browsing {
+    display: none;
+  }
+
+  .keep-browsing-desktop {
+    display: grid;
+    padding: 70px;
+  }
+
+  .keep-browsing-desktop h2 {
+    text-align: center;
+    font-size: 2em;
+    max-width: 8ch;
+    margin: auto;
+    padding: 0;
+  }
+
+  .keep-browsing-desktop p {
+    text-align: center;
+    max-width: 30ch;
+    margin: auto;
+    padding-bottom: 30px;
+    font-size: large;
+  }
+
+  .pets,
+  .newsletter {
+    display: none;
+  }
+
+  .mid-filler {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    max-width: 50%;
+    margin: auto;
+    justify-content: space-around;
+  }
+
+  .newsletter-desktop {
+    padding-right: 20px;
+  }
+
+  .pets-desktop {
+    display: grid;
+    gap: 10px;
+    text-align: center;
+    padding-bottom: 70px;
+    padding-left: 20px;
+  }
+  .pets-desktop img {
+    max-width: 20em;
+    border-radius: 50%;
+    margin: auto;
+  }
+
+  .pets-desktop h2 {
+    font-size: 2em;
+    max-width: 23ch;
+    margin: auto;
+  }
+
+  .video-banner {
+    height: 40em;
+    width: 70em;
+    position: relative;
+    margin: auto;
+    overflow: hidden;
+  }
+
+  .video-banner > video {
+    object-fit: cover;
+    height: 90%;
+    width: 100%;
+    border-radius: 50px;
+    filter: brightness(70%);
+  }
+
+  .video-banner-content {
+    display: grid;
+    position: absolute;
+    inset: 0;
+    padding: 2em 50em 7em 0;
+    align-content: center;
+    z-index: 2;
+    color: white;
+    max-width: 45em;
+    max-height: 50em;
+  }
+
+  .video-logo {
+    max-width: 15em;
+    position: absolute;
+    grid-column: 2;
+    z-index: 2;
+    padding-left: 415px;
+  }
+
+  .video-background {
+    max-width: 100em;
+    max-height: 100em;
+    position: absolute;
+    grid-column: 2;
+    z-index: 1;
+    padding: 22em;
+  }
+
+  .subscribe-heading {
+    font-weight: 600;
+    font-size: 3.8em;
+    padding-bottom: 10px;
+  }
+
+  .subscribe-text {
+    font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 2.8em;
+    text-align: left;
+    max-width: 18ch;
+    min-width: 18ch;
+    padding-bottom: 5px;
+  }
+
+  .newsletter {
+    padding-bottom: 70px;
+  }
+
+  .shipping {
+    display: grid;
+    gap: 10px;
+    text-align: left;
+    padding: 20px;
+    margin: auto;
+    background: #fbfbfb;
+  }
+
+  .shipping img {
+    max-width: 20em;
+    margin: auto;
+  }
+
+  .shipping h2 {
+    font-size: 3em;
+    margin: auto;
+    padding: 0%;
+  }
+
+  .shipping p {
+    margin: auto;
+    max-width: 90ch;
+    font-size: 2em;
+  }
+
+  .cta__orange {
+    background-color: #5e2c07;
+    color: white;
+    font-size: 1.5em;
+    font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+    text-decoration: none;
+    text-transform: uppercase;
+    text-wrap: nowrap;
+    padding: 10px 5em;
+    border-radius: 20px;
+    max-width: 1000px;
+    margin: auto;
+    position: relative;
+    display: inline-block;
+  }
+
+  .top-footer {
+    display: grid;
+    align-items: center;
+    background-color: #4f7a80;
+    color: #fff;
+    height: 13em;
+  }
+
+  .top-footer i,
+  .top-footer a {
+    font-size: large;
+  }
+
+  .top-footer img {
+    display: block;
+    margin: auto;
+    max-width: 10em;
+    grid-column: 2;
+    padding-left: 30px;
+  }
+
+  .footer-links-left {
+    color: #fff;
+    grid-column: 1;
+    max-width: 19ch;
+    padding-left: 10%;
+  }
+
+  .footer-links-right {
+    grid-column: 3;
+    text-align: right;
+    padding-right: 10%;
+  }
+
+  .bottom-footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 10px;
+    background-color: #ebebeb;
+    color: #000000;
+    max-width: 50em;
+    margin: auto;
+  }
+
+  .social-logos {
+    font-size: 2em;
+    color: #0b3a40;
+  }
+
+  .copyright {
+    font-size: 0.8em;
+    text-align: center;
+    font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
   }
 }
-
-  /* REMEMBER TO INSERT LOGO HERE /*
-

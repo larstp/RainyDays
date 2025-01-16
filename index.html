@@ -12,8 +12,8 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
     <link href="css/video.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -25,7 +25,7 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header class="mobile">
       <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav>
@@ -52,6 +52,37 @@
       /></a>
       <a href="pop-ups/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
+    <header class="desktop">
+      <nav>
+        <ul>
+          <div class="header-left">
+            <li class="current">
+              <a href="index.html" class="header-text">Home</a>
+            </li>
+            <li><a href="about.html" class="header-text">About</a></li>
+          </div>
+          <li>
+            <a href="index.html"
+              ><img
+                src="images/logos/RainyDays_Logo Only.png"
+                class="header-logo"
+                alt="RainyDays logo"
+            /></a>
+          </li>
+          <div class="header-right">
+            <li><a href="contact.html" class="header-text">Contact</a></li>
+            <li>
+              <a href="pop-ups/cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <a href="pop-ups/user.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
     <main>
       <section class="tagline">
         <img
@@ -71,7 +102,8 @@
               src="/images/jackets/1- standard.png"
               alt="Rainydays Tech Fleece 70"
           /></a>
-          <h3>Rainydays Tech Fleece 70</h3>
+          <h2>Rainydays</h2>
+          <h3>Tech Fleece 70</h3>
           <p>£219</p>
         </div>
         <div class="products">
@@ -80,7 +112,8 @@
               src="/images/jackets/2- standard.png"
               alt="Rainydays Shell Jacket"
           /></a>
-          <h3>Rainydays Shell Jacket</h3>
+          <h2>Rainydays</h2>
+          <h3>Shell Jacket</h3>
           <p>£199</p>
         </div>
         <div class="products">
@@ -89,7 +122,8 @@
               src="/images/jackets/3 - standard.png"
               alt="Rainydays Bomber Jacket V40"
           /></a>
-          <h3>Rainydays Bomber Jacket V40</h3>
+          <h2>Rainydays</h2>
+          <h3>Bomber Jacket V40</h3>
           <p>£89</p>
         </div>
         <div class="products">
@@ -98,7 +132,8 @@
               src="/images/jackets/4 - standard.png"
               alt="Rainydays Ski Jacket Shoftshell"
           /></a>
-          <h3>Rainydays Ski Jacket Softshell</h3>
+          <h2>Rainydays</h2>
+          <h3>Ski Jacket Softshell</h3>
           <p>£199</p>
         </div>
         <div class="products">
@@ -107,7 +142,8 @@
               src="/images/jackets/5 - standard.png"
               alt="Rainydays Runner Jacket"
           /></a>
-          <h3>Rainydays Runner Jacket</h3>
+          <h2>Rainydays</h2>
+          <h3>Runner Jacket</h3>
           <p>£59</p>
         </div>
         <div class="products">
@@ -116,7 +152,8 @@
               src="/images/jackets/6 - standard.png"
               alt="Rainydays Soft Shell Rain Jacket"
           /></a>
-          <h3>Rainydays Softshell Rain Jacket</h3>
+          <h2>Rainydays</h2>
+          <h3>Softshell Rain Jacket</h3>
           <p>£79</p>
         </div>
         <div class="products">
@@ -125,7 +162,8 @@
               src="/images/jackets/7 - standard.png"
               alt="Rainydays Heavy Duty All Weather Jacket"
           /></a>
-          <h3>Rainydays Heavy Duty All Weather Jacket</h3>
+          <h2>Rainydays</h2>
+          <h3>Heavy Duty All Weather Jacket</h3>
           <p>£299</p>
         </div>
         <div class="products">
@@ -134,7 +172,8 @@
               src="/images/jackets/8 - standard.png"
               alt="Rainydays Summer Bomber"
           /></a>
-          <h3>Rainydays Summer Bomber</h3>
+          <h2>Rainydays</h2>
+          <h3>Summer Bomber</h3>
           <p>£129</p>
         </div>
         <div class="keep-browsing-desktop">
@@ -185,6 +224,41 @@
         <p>Check out our stylish pet lineup</p>
         <a href="placeholders/pets.html" class="cta">See more</a>
       </section>
+      <div class="mid-filler">
+        <section class="newsletter-desktop">
+          <div class="video-banner">
+            <video autoplay loop muted id="background-video">
+              <source src="videos/forrest.mp4" type="video/mp4" />
+              Your browser does not support HTML video.
+            </video>
+            <div class="video-banner-content">
+              <span class="subscribe-heading"
+                >Subscribe to our newsletter!</span
+              >
+              <span class="subscribe-text"
+                >Stay up to date on all our new releases</span
+              >
+              <img
+                src="images/logos/RainyDays_Logo.png"
+                alt="RainyDays logo"
+                class="video-logo"
+              />
+              <img
+                src="images/logos/Polygon 1.png"
+                alt="Polygon"
+                class="video-background"
+              />
+              <a href="/pop-ups/signup.html" class="cta__orange">Subscribe</a>
+            </div>
+          </div>
+        </section>
+        <section class="pets-desktop">
+          <h2>Get matching gear for your four legged friend!</h2>
+          <img src="/images/unsplash/pet-clothes.jpg" alt="Cat with a scarf" />
+          <p>Check out our stylish pet lineup</p>
+          <a href="placeholders/pets.html" class="cta">See more</a>
+        </section>
+      </div>
       <section class="shipping">
         <h2>2-5 day climate neutral shipping</h2>
         <img
