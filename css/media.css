@@ -70,6 +70,53 @@
     padding-bottom: 30px;
     font-size: small;
   }
+
+  .about-text {
+    margin: 0% 20% 10% 20%;
+    background: #ebebeb;
+    padding: 1em 5em;
+    border-radius: 0 0 50px 50px;
+  }
+
+  .about-text h2 {
+    font-size: 3em;
+    text-align: center;
+    padding-top: 20px;
+    padding-bottom: 20px;
+  }
+
+  .about-text p {
+    line-height: 1.5em;
+  }
+
+  .about-text a {
+    display: block;
+    text-align: center;
+    max-width: fit-content;
+  }
+
+  .mountain-background {
+    display: block;
+  }
+
+  #mountains-video {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    z-index: -2;
+    top: f;
+    background-image: linear-gradient(
+      to top,
+      rgba(255, 255, 255, 0),
+      #ebebeb 100%
+    );
+  }
+
+  .contact-text-desktop {
+    display: block;
+  }
 }
 
 @media (min-width: 1150px) {
@@ -178,6 +225,10 @@
   .products {
     display: block;
     margin: auto;
+  }
+
+  h1 {
+    font-size: 3em;
   }
 
   .products h2 {
@@ -421,5 +472,31 @@
     font-size: 0.8em;
     text-align: center;
     font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  }
+
+  .contact-container {
+    display: flex;
+    padding-bottom: 6em;
+  }
+
+  .contact {
+    margin: auto;
+    padding-left: 10%;
+  }
+
+  .contact-image {
+    max-width: 45%;
+    margin: auto;
+    display: block;
+    border-radius: 25px;
+  }
+
+  .contact-maps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 50%;
+    margin: 50px auto;
+    gap: 31px;
+    font-size: 0.5em;
   }
 }

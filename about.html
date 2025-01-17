@@ -12,9 +12,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
     <link href="css/video.css" rel="stylesheet" />
     <link href="css/about.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -26,7 +26,7 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header class="mobile">
       <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav>
@@ -37,9 +37,7 @@
           <li class="current">
             <a href="about.html" class="hamburger-text">About</a>
           </li>
-          <li>
-            <a href="contact.html" class="hamburger-text">Contact</a>
-          </li>
+          <li><a href="contact.html" class="hamburger-text">Contact</a></li>
           <li>
             <a href="pop-ups/user.html" class="cta__orange">Log In</a>
           </li>
@@ -57,7 +55,45 @@
       /></a>
       <a href="pop-ups/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
+    <header class="desktop">
+      <nav>
+        <ul>
+          <div class="header-left">
+            <li>
+              <a href="index.html" class="header-text">Home</a>
+            </li>
+            <li class="current">
+              <a href="about.html" class="header-text">About</a>
+            </li>
+          </div>
+          <li>
+            <a href="index.html"
+              ><img
+                src="images/logos/RainyDays_Logo Only.png"
+                class="header-logo"
+                alt="RainyDays logo"
+            /></a>
+          </li>
+          <div class="header-right">
+            <li><a href="contact.html" class="header-text">Contact</a></li>
+            <li>
+              <a href="pop-ups/cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <a href="pop-ups/user.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
     <main>
+      <section class="mountain-background">
+        <video autoplay muted loop id="mountains-video">
+          <source src="videos/mountains flying.mp4" type="video/mp4" />
+        </video>
+      </section>
       <section class="about-text">
         <h2>Pushing the Comfort Zone</h2>
         <p>

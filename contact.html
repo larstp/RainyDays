@@ -12,9 +12,9 @@
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link href="css/styles.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
     <link href="css/video.css" rel="stylesheet" />
     <link href="css/contact.css" rel="stylesheet" />
+    <link href="css/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -26,7 +26,7 @@
     ></script>
   </head>
   <body>
-    <header>
+    <header class="mobile">
       <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
       <nav>
@@ -55,67 +55,110 @@
       /></a>
       <a href="pop-ups/cart.html"><i class="fa-solid fa-cart-shopping"></i></a>
     </header>
+    <header class="desktop">
+      <nav>
+        <ul>
+          <div class="header-left">
+            <li>
+              <a href="index.html" class="header-text">Home</a>
+            </li>
+            <li><a href="about.html" class="header-text">About</a></li>
+          </div>
+          <li>
+            <a href="index.html"
+              ><img
+                src="images/logos/RainyDays_Logo Only.png"
+                class="header-logo"
+                alt="RainyDays logo"
+            /></a>
+          </li>
+          <div class="header-right">
+            <li class="current">
+              <a href="contact.html" class="header-text">Contact</a>
+            </li>
+            <li>
+              <a href="pop-ups/cart.html"
+                ><i class="fa-solid fa-cart-shopping"></i
+              ></a>
+            </li>
+            <li>
+              <a href="pop-ups/user.html"><i class="fa-solid fa-user"></i></a>
+            </li>
+          </div>
+        </ul>
+      </nav>
+    </header>
     <main>
       <h1>Contact us!</h1>
-      <section class="contact">
-        <form method="post">
-          <div class="contact__fieldset">
-            <section>
-              <label for="name">Full Name*</label>
-              <input type="text" id="name" name="name" />
-              <label for="email">Email*</label>
-              <input type="email" id="email" name="email" />
-              <label for="email">Phone number</label>
-              <input type="phone" id="phone" name="phone" />
-            </section>
-            <section>
-              <div class="contact__fieldset">
-                <label for="message">Message</label>
-                <textarea
-                  name="message"
-                  id="message"
-                  rows="15"
-                  cols="40"
-                ></textarea>
-              </div>
-            </section>
-            <section>
-              <div>
-                <input
-                  type="checkbox"
-                  name="newsletter"
-                  id="newsletter"
-                  value="newsletter"
-                />
-                <label for="newsletter">Sign up for our newsletter</label>
-              </div>
-            </section>
-            <section class="cta__send">
-              <a href="placeholders/back.html" class="cta">Send</a>
-            </section>
-          </div>
-        </form>
+      <section class="contact-container">
+        <section class="contact">
+          <form method="post">
+            <div class="contact__fieldset">
+              <section>
+                <label for="name">Full Name*</label>
+                <input type="text" id="name" name="name" />
+                <label for="email">Email*</label>
+                <input type="email" id="email" name="email" />
+                <label for="email">Phone number</label>
+                <input type="phone" id="phone" name="phone" />
+              </section>
+              <section>
+                <div class="contact__fieldset">
+                  <label for="message">Message</label>
+                  <textarea
+                    name="message"
+                    id="message"
+                    rows="15"
+                    cols="40"
+                  ></textarea>
+                </div>
+              </section>
+              <section>
+                <div>
+                  <input
+                    type="checkbox"
+                    name="newsletter"
+                    id="newsletter"
+                    value="newsletter"
+                  />
+                  <label for="newsletter">Sign up for our newsletter</label>
+                </div>
+              </section>
+              <section class="cta__send">
+                <a href="placeholders/back.html" class="cta">Send</a>
+              </section>
+            </div>
+          </form>
+        </section>
+        <section class="contact-text">
+          <p>Have a question about our products?</p>
+          <p>Need help with shipping or returns?</p>
+          <p>
+            Interested in collaborating with us or have a brilliant product
+            idea? We’re here to help! Our friendly and knowledgeable team is
+            always ready to assist you.
+          </p>
+          <p>
+            Whether you’re a seasoned customer or a curious newcomer, feel free
+            to reach out anytime!
+          </p>
+          <img
+            src="images/unsplash/contact picture.jpg"
+            alt="Picture of the whole team jumping for joy"
+            class="contact-image"
+          />
+        </section>
       </section>
       <section class="contact-text">
-        <p>Have a question about our products?</p>
-        <p>Need help with shipping or returns?</p>
-        <p>
-          Interested in collaborating with us or have a brilliant product idea?
-          We’re here to help! Our friendly and knowledgeable team is always
-          ready to assist you.
-        </p>
-        <p>
-          Whether you’re a seasoned customer or a curious newcomer, feel free to
-          reach out anytime!
-        </p>
-        <img
-          src="images/unsplash/contact picture.jpg"
-          alt="Picture of the whole team jumping for joy"
-          class="contact-image"
-        />
         <p>
           If you prefer a more hands-on experience, why not visit one of our
           fantastic flagship stores?
+        </p>
+        <p class="contact-text-desktop">
+          Our store associates are passionate about our products and can help
+          you find the perfect item. You can browse our latest collections, try
+          on different styles, and get expert advice. We look forward to
+          welcoming you in-store!
         </p>
       </section>
       <section class="contact-maps">
