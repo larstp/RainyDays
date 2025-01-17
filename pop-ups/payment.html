@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link href="../css/payment.css" rel="stylesheet" />
+    <link href="../pop-ups/pop-ups-css/pop-ups-media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -27,84 +28,86 @@
       </section>
     </header>
     <main>
-      <section class="checkout">
-        <form method="post">
-          <div class="checkout__fieldset">
-            <a href="../index.html"><i class="fa-solid fa-angle-left"></i></a>
-            <h1>Checkout</h1>
-            <div class="checkout-heading">
-              <h2>Delivery Address</h2>
+      <div class="login-mobile">
+        <section class="checkout">
+          <form method="post">
+            <div class="checkout__fieldset">
+              <a href="../index.html"><i class="fa-solid fa-angle-left"></i></a>
+              <h1>Checkout</h1>
+              <div class="checkout-heading">
+                <h2>Delivery Address</h2>
+              </div>
+              <section class="checkout-choices">
+                <i class="fa-solid fa-map-location-dot"></i>
+                <div class="checkout__info">
+                  <h3>10 Lower Scott Road, 7925</h3>
+                </div>
+                <a href="../placeholders/back.html"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></a>
+              </section>
+              <div class="checkout-heading">
+                <h2>Payment Method</h2>
+              </div>
+              <section class="checkout-choices">
+                <i class="fa-brands fa-cc-apple-pay"></i>
+                <div class="checkout__info">
+                  <h3>Apple Pay</h3>
+                </div>
+                <div class="checkbox-placement">
+                  <input type="checkbox" class="round-checkbox" />
+                </div>
+              </section>
+              <section class="checkout-choices">
+                <i class="fa-brands fa-cc-visa"></i>
+                <div class="checkout__info">
+                  <h3 class="visa">Visa</h3>
+                </div>
+                <section class="checkbox-placement">
+                  <input type="checkbox" class="round-checkbox" />
+                </section>
+              </section>
+              <section class="checkout-choices">
+                <i class="fa-brands fa-cc-mastercard"></i>
+                <div class="checkout__info">
+                  <h3>Master Card</h3>
+                </div>
+                <section class="checkbox-placement">
+                  <input type="checkbox" class="round-checkbox" />
+                </section>
+              </section>
+              <section class="cart__link">
+                <h2>My Cart</h2>
+                <a href="../pop-ups/cart.html"
+                  ><i class="fa-solid fa-angle-right"></i
+                ></a>
+              </section>
+              <section class="cart-item-container">
+                <img
+                  src="../images/jackets/1- standard.png"
+                  alt="Rainydays Tech Fleece 70"
+                  class="product-picture"
+                />
+                <section class="cart-item__info">
+                  <h2>Rainydays</h2>
+                  <h2>Tech Fleece 70</h2>
+                  <p class="size">Size: M</p>
+                </section>
+              </section>
+              <hr />
+              <section class="total">
+                <p class="total-left">Total</p>
+                <p class="total-right">£328.00</p>
+              </section>
+              <section>
+                <a href="../pop-ups/approved.html" class="cta__checkout"
+                  >Pay Now</a
+                >
+              </section>
             </div>
-            <section class="checkout-choices">
-              <i class="fa-solid fa-map-location-dot"></i>
-              <div class="checkout__info">
-                <h3>10 Lower Scott Road, 7925</h3>
-              </div>
-              <a href="../placeholders/back.html"
-                ><i class="fa-solid fa-angle-right"></i
-              ></a>
-            </section>
-            <div class="checkout-heading">
-              <h2>Payment Method</h2>
-            </div>
-            <section class="checkout-choices">
-              <i class="fa-brands fa-cc-apple-pay"></i>
-              <div class="checkout__info">
-                <h3>Apple Pay</h3>
-              </div>
-              <div class="checkbox-placement">
-                <input type="checkbox" class="round-checkbox" />
-              </div>
-            </section>
-            <section class="checkout-choices">
-              <i class="fa-brands fa-cc-visa"></i>
-              <div class="checkout__info">
-                <h3 class="visa">Visa</h3>
-              </div>
-              <section class="checkbox-placement">
-                <input type="checkbox" class="round-checkbox" />
-              </section>
-            </section>
-            <section class="checkout-choices">
-              <i class="fa-brands fa-cc-mastercard"></i>
-              <div class="checkout__info">
-                <h3>Master Card</h3>
-              </div>
-              <section class="checkbox-placement">
-                <input type="checkbox" class="round-checkbox" />
-              </section>
-            </section>
-            <section class="cart__link">
-              <h2>My Cart</h2>
-              <a href="../pop-ups/cart.html"
-                ><i class="fa-solid fa-angle-right"></i
-              ></a>
-            </section>
-            <section class="cart-item-container">
-              <img
-                src="../images/jackets/1- standard.png"
-                alt="Rainydays Tech Fleece 70"
-                class="product-picture"
-              />
-              <section class="cart-item__info">
-                <h2>Rainydays</h2>
-                <h2>Tech Fleece 70</h2>
-                <p class="size">Size: M</p>
-              </section>
-            </section>
-            <hr />
-            <section class="total">
-              <p class="total-left">Total</p>
-              <p class="total-right">£328.00</p>
-            </section>
-            <section>
-              <a href="../pop-ups/approved.html" class="cta__checkout"
-                >Pay Now</a
-              >
-            </section>
-          </div>
-        </form>
-      </section>
+          </form>
+        </section>
+      </div>
     </main>
     <footer></footer>
   </body>
