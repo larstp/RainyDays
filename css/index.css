@@ -90,12 +90,6 @@
 
 /* Featured Products */
 
-.products {
-  display: grid;
-  grid-template-columns: 1fr auto;
-  align-items: center;
-}
-
 .products img {
   grid-column: -1/1;
   margin: auto;
@@ -111,6 +105,7 @@
   grid-column: 2;
   font-size: 0.8em;
   margin: auto;
+  padding: 0;
 }
 
 .products p {
@@ -119,14 +114,16 @@
   padding-left: 15%;
   color: #0b3a40;
   margin-top: 0;
+  padding: 0;
 }
 
 .featured {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
-  max-width: 465px;
+  max-width: 80%;
   margin: 50px auto;
   gap: 10px;
+  padding-left: 17%;
 }
 
 .featured img {

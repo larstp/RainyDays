@@ -4,6 +4,74 @@
   }
 }
 
+@media (min-width: 800px) {
+  .products img {
+    grid-column: -1/1;
+    margin: auto;
+  }
+
+  .products a {
+    grid-column: -1/1;
+    margin: auto;
+  }
+
+  .products h2,
+  .products h3 {
+    grid-column: 2;
+    font-size: 0.8em;
+    margin: auto;
+    padding: 0;
+  }
+
+  .products p {
+    grid-column: 2;
+    font-size: 1.1em;
+    padding-left: 15%;
+    color: #0b3a40;
+    margin-top: 0;
+    padding: 0;
+  }
+
+  .featured {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    max-width: 80%;
+    margin: 50px auto;
+    gap: 10px;
+    padding-left: 17%;
+  }
+
+  .featured img {
+    max-width: 8em;
+    max-height: 140px;
+  }
+
+  .keep-browsing {
+    display: none;
+  }
+
+  .keep-browsing-desktop {
+    display: grid;
+    padding-right: 50%;
+  }
+
+  .keep-browsing-desktop h2 {
+    text-align: center;
+    font-size: 1em;
+    max-width: 8ch;
+    margin: auto;
+    padding: 0;
+  }
+
+  .keep-browsing-desktop p {
+    text-align: center;
+    max-width: 30ch;
+    margin: auto;
+    padding-bottom: 30px;
+    font-size: small;
+  }
+}
+
 @media (min-width: 1150px) {
   .mobile {
     display: none;
@@ -18,6 +86,11 @@
   nav {
     display: block;
     position: static;
+  }
+
+  li,
+  a {
+    font-size: 0.5em;
   }
 
   .header-text {
@@ -40,7 +113,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-around;
-    padding: 40px 0 6% 0;
+    padding: 40px 0 6% 4em;
     align-items: center;
     margin: 0;
   }
@@ -94,6 +167,7 @@
     max-width: 50%;
     margin: 50px auto;
     gap: 10px;
+    padding-left: 0%;
   }
 
   .featured img {
@@ -155,8 +229,6 @@
 
   .mid-filler {
     display: flex;
-    justify-content: center;
-    flex-direction: row;
     max-width: 50%;
     margin: auto;
     justify-content: space-around;
@@ -164,6 +236,7 @@
 
   .newsletter-desktop {
     padding-right: 20px;
+    align-content: center;
   }
 
   .pets-desktop {
@@ -174,20 +247,21 @@
     padding-left: 20px;
   }
   .pets-desktop img {
-    max-width: 20em;
+    max-width: 15em;
     border-radius: 50%;
     margin: auto;
   }
 
-  .pets-desktop h2 {
-    font-size: 2em;
-    max-width: 23ch;
+  .pets-desktop h2,
+  .pets-desktop p {
+    font-size: 1.4em;
+    max-width: 30ch;
     margin: auto;
   }
 
   .video-banner {
-    height: 40em;
-    width: 70em;
+    height: 30em;
+    width: 50em;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -195,8 +269,8 @@
 
   .video-banner > video {
     object-fit: cover;
-    height: 90%;
-    width: 100%;
+    height: 55%;
+    width: 65%;
     border-radius: 50px;
     filter: brightness(70%);
   }
@@ -205,40 +279,42 @@
     display: grid;
     position: absolute;
     inset: 0;
-    padding: 2em 50em 7em 0;
+    padding: 2em 0 0 0;
     align-content: center;
     z-index: 2;
     color: white;
-    max-width: 45em;
-    max-height: 50em;
+    max-width: 15em;
+    max-height: 15em;
   }
 
   .video-logo {
-    max-width: 15em;
+    max-width: 8em;
     position: absolute;
     grid-column: 2;
     z-index: 2;
-    padding-left: 415px;
+    padding-left: 125px;
   }
 
   .video-background {
-    max-width: 100em;
-    max-height: 100em;
+    max-width: 14em;
+    max-height: 21em;
     position: absolute;
     grid-column: 2;
     z-index: 1;
-    padding: 22em;
+    padding-bottom: 8px;
+    padding-left: 57px;
+    border-radius: 50px;
   }
 
   .subscribe-heading {
     font-weight: 600;
-    font-size: 3.8em;
+    font-size: 1.5em;
     padding-bottom: 10px;
   }
 
   .subscribe-text {
     font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
-    font-size: 2.8em;
+    font-size: 1em;
     text-align: left;
     max-width: 18ch;
     min-width: 18ch;
@@ -253,7 +329,7 @@
     display: grid;
     gap: 10px;
     text-align: left;
-    padding: 20px;
+    padding: 100px;
     margin: auto;
     background: #fbfbfb;
   }
@@ -278,12 +354,12 @@
   .cta__orange {
     background-color: #5e2c07;
     color: white;
-    font-size: 1.5em;
+    font-size: 1em;
     font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
     text-decoration: none;
     text-transform: uppercase;
     text-wrap: nowrap;
-    padding: 10px 5em;
+    padding: 10px 2em;
     border-radius: 20px;
     max-width: 1000px;
     margin: auto;

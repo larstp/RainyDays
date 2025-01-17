@@ -8,9 +8,9 @@
 
 .video-banner > video {
   object-fit: cover;
-  height: 90%;
+  height: 80%;
   width: 100%;
-  border-radius: 10%;
+  border-radius: 25px;
   overflow: hidden;
   filter: brightness(70%);
 }
@@ -38,11 +38,11 @@
 
 /* How do I make the top part of the white triangle rounded? Aaaaaah! */
 .video-background {
-  max-width: 200px;
   position: absolute;
   grid-column: 2;
   z-index: 1;
-  max-height: 190px;
+  max-height: 156px;
+  border-radius: 51px;
 }
 
 .subscribe-text {
