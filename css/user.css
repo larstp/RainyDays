@@ -1,3 +1,7 @@
+.desktop {
+  display: none;
+}
+
 .back-btn {
   display: flex;
   margin: auto;

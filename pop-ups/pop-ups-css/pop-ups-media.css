@@ -1,4 +1,47 @@
 @media (min-width: 1150px) {
-    .login-mobile {
-      display: none;
-    }
+  .login-mobile {
+    display: none;
+  }
+
+  .login-desktop {
+    display: block;
+    max-width: 50%;
+    margin: auto;
+  }
+
+  .login__fieldset {
+    max-width: 100%;
+    border-radius: 0 50px 50px 0;
+  }
+
+  .signup__fieldset {
+    max-width: 30em;
+    border-radius: 0 50px 50px 0;
+  }
+
+  .login-image img {
+    max-height: 47em;
+    border-radius: 50px 0 0 50px;
+  }
+
+  .signup-image img {
+    max-height: 59em;
+    border-radius: 50px 0 0 50px;
+  }
+
+  .login {
+    display: flex;
+    flex-direction: row-reverse;
+  }
+
+  p {
+    font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+    color: #4e5152;
+    font-size: small;
+    padding: 10px;
+  }
+
+  form {
+    padding-bottom: 3em;
+  }
+}

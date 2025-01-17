@@ -8,6 +8,7 @@
     <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
     <link href="../css/signup.css" rel="stylesheet" />
+    <link href="../pop-ups/pop-ups-css/pop-ups-media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -27,46 +28,97 @@
       </section>
     </header>
     <main>
-      <section class="cart">
-        <form method="post">
-          <div class="signup__fieldset">
-            <a href="index.html"
-              ><img
-                src="../images/logos/RainyDays_Logo.png"
-                class="signup-logo"
-                alt="RainyDays logo"
-            /></a>
-            <h1>Sign up</h1>
-            <section class="signup">
-              <form method="post">
-                <div class="signup__fieldset">
-                  <section>
-                    <label for="name">Full Name*</label>
-                    <input type="text" id="name" name="name" />
-                    <label for="email">Email*</label>
-                    <input type="email" id="email" name="email" />
-                    <label for="email">Password*</label>
-                    <input type="password" id="password" name="password" />
-                  </section>
-                </div>
-              </form>
+      <div class="login-mobile">
+        <section class="cart">
+          <form method="post">
+            <div class="signup__fieldset">
+              <a href="index.html"
+                ><img
+                  src="../images/logos/RainyDays_Logo.png"
+                  class="signup-logo"
+                  alt="RainyDays logo"
+              /></a>
+              <h1>Sign up</h1>
+              <section class="signup">
+                <form method="post">
+                  <div class="signup__fieldset">
+                    <section>
+                      <label for="name">Full Name*</label>
+                      <input type="text" id="name" name="name" />
+                      <label for="email">Email*</label>
+                      <input type="email" id="email" name="email" />
+                      <label for="email">Password*</label>
+                      <input type="password" id="password" name="password" />
+                    </section>
+                  </div>
+                </form>
+              </section>
+              <section class="signup-alternatives">
+                <a href="../placeholders/back.html" class="cta__change-method"
+                  >Change method</a
+                >
+              </section>
+              <section class="signup-alternatives">
+                <a href="../placeholders/back.html" class="cta"
+                  >Create account</a
+                >
+              </section>
+              <hr />
+              <section class="has-account">
+                <p>Already a member?</p>
+                <a href="user.html" class="sign-up__text">Log in</a>
+              </section>
+            </div>
+          </form>
+        </section>
+      </div>
+      <div class="login-desktop">
+        <section class="cart">
+          <form method="post">
+            <section class="signup-image">
+              <img src="../images/unsplash/signup-left.webp" />
             </section>
-            <section class="signup-alternatives">
-              <a href="../placeholders/back.html" class="cta__change-method"
-                >Change method</a
-              >
-            </section>
-            <section class="signup-alternatives">
-              <a href="../placeholders/back.html" class="cta">Create account</a>
-            </section>
-            <hr />
-            <section class="has-account">
-              <p>Already a member?</p>
-              <a href="user.html" class="sign-up__text">Log in</a>
-            </section>
-          </div>
-        </form>
-      </section>
+            <div class="signup__fieldset">
+              <a href="index.html"
+                ><img
+                  src="../images/logos/RainyDays_Logo.png"
+                  class="signup-logo"
+                  alt="RainyDays logo"
+              /></a>
+              <h1>Sign up</h1>
+              <section class="signup">
+                <form method="post">
+                  <div class="signup__fieldset">
+                    <section>
+                      <label for="name">Full Name*</label>
+                      <input type="text" id="name" name="name" />
+                      <label for="email">Email*</label>
+                      <input type="email" id="email" name="email" />
+                      <label for="email">Password*</label>
+                      <input type="password" id="password" name="password" />
+                    </section>
+                  </div>
+                </form>
+              </section>
+              <section class="signup-alternatives">
+                <a href="../placeholders/back.html" class="cta__change-method"
+                  >Change method</a
+                >
+              </section>
+              <section class="signup-alternatives">
+                <a href="../placeholders/back.html" class="cta"
+                  >Create account</a
+                >
+              </section>
+              <hr />
+              <section class="has-account">
+                <p>Already a member?</p>
+                <a href="user.html" class="sign-up__text">Log in</a>
+              </section>
+            </div>
+          </form>
+        </section>
+      </div>
     </main>
     <footer></footer>
   </body>
