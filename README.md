@@ -1,5 +1,7 @@
 # RainyDays
 
+![Image](https://github.com/user-attachments/assets/eddd65a2-163d-438e-9603-a7bbc7e51c18)
+
 FED1 - HTML & CSS - Course Assignment
 
 I went a bit overboard on the DES1 Course Assignment that we are meant to mimic in this assignment when it came to pop-ups and graphics etc., so I'll knock this page back a few steps so I can actually finish it. (also since JavaScript is needed)
