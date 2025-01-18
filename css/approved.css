@@ -1,3 +1,7 @@
+/*This is a placeholder page for the approved purchase page, as it should be a pop-up initially*/
+
+/* NOTE: I had to place a media query here to adjust something, but this ia just a temp solution. It would not be like this if it was a pop-up*/
+
 @media (min-width: 1150px) {
   .approved__fieldset {
     border: #fff;
@@ -17,6 +21,8 @@
     flex-direction: column;
   }
 }
+
+/* Top placeholder */
 
 .back-btn {
   display: flex;
@@ -54,6 +60,8 @@ a {
 p {
   color: white;
 }
+
+/* Form */
 
 form {
   display: flex;

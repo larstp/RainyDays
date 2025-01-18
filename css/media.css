@@ -1,3 +1,9 @@
+/* Main media page*/
+
+/*The screen size for desktop is a bit weird. Need to make better*/
+
+/*NOTE: nothing on this page directly links to any of the media query's in the "pop-up" placeholders. They have their own temporary media file (/pop-ups/pop-ups-css/pop-ups-media.css)*/
+
 @media (min-width: 400px) {
   .product-list {
     grid-template-columns: repeat(2, 1fr);
@@ -119,7 +125,7 @@
   }
 }
 
-@media (min-width: 1150px) {
+@media (min-width: 1300px) {
   .mobile {
     display: none;
   }

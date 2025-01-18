@@ -1,3 +1,5 @@
+/* This page is for controlling the video ads. (NOTE: There is only one ad at the present, and thats on the landing page)*/
+
 .video-banner {
   height: 220px;
   width: 300px;
@@ -36,7 +38,6 @@
   padding-left: 30px;
 }
 
-/* How do I make the top part of the white triangle rounded? Aaaaaah! */
 .video-background {
   position: absolute;
   grid-column: 2;

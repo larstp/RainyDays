@@ -1,3 +1,7 @@
+/*This is a placeholder page for the login/user page, as it should be a pop-up initially*/
+
+/* Top placeholder */
+
 .back-btn {
   display: flex;
   margin: auto;
@@ -7,6 +11,8 @@
 .pop-up {
   color: white;
 }
+
+/* Login form */
 
 body {
   background: black;

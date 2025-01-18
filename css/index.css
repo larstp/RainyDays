@@ -1,6 +1,4 @@
 .tagline {
-  top: 50px;
-  left: 50%;
   padding: 20px;
 }
 
@@ -14,78 +12,6 @@
 
 .tagline h2 {
   text-align: center;
-}
-
-.keep-browsing {
-  display: grid;
-  padding-bottom: 70px;
-}
-.keep-browsing h2 {
-  text-align: center;
-  font-size: 2em;
-  max-width: 8ch;
-  margin: auto;
-}
-
-.keep-browsing p {
-  font-size: 1em;
-  text-align: center;
-  font-size: large;
-  max-width: 25ch;
-  margin: auto;
-  padding-bottom: 30px;
-}
-
-/* I couldn't find a better way to hide the desktop version of the keep-browsing section */
-.keep-browsing-desktop {
-  display: none;
-}
-
-.mid-filler {
-  display: none;
-}
-
-.pets {
-  display: grid;
-  gap: 10px;
-  text-align: center;
-  padding-bottom: 70px;
-}
-.pets img {
-  max-width: 8em;
-  border-radius: 50%;
-  margin: auto;
-}
-
-.pets h2 {
-  font-size: 1.4em;
-  max-width: 23ch;
-  margin: auto;
-}
-
-.shipping {
-  display: grid;
-  gap: 10px;
-  text-align: left;
-  padding: 20px;
-  margin: auto;
-  background: #fbfbfb;
-}
-
-.shipping img {
-  max-width: 8em;
-  margin: auto;
-}
-
-.shipping h2 {
-  font-size: 1.2em;
-  margin: auto;
-  padding: 0%;
-}
-
-.shipping p {
-  margin: auto;
-  max-width: 110ch;
 }
 
 /* Featured Products */
@@ -131,6 +57,83 @@
   max-height: 140px;
 }
 
+/* Keep Browsing (this part is differently placed for media over 1150px) */
+
+.keep-browsing {
+  display: grid;
+  padding-bottom: 70px;
+}
+.keep-browsing h2 {
+  text-align: center;
+  font-size: 2em;
+  max-width: 8ch;
+  margin: auto;
+}
+
+.keep-browsing p {
+  font-size: 1em;
+  text-align: center;
+  font-size: large;
+  max-width: 25ch;
+  margin: auto;
+  padding-bottom: 30px;
+}
+
+.keep-browsing-desktop {
+  display: none;
+}
+
+/* Mid section with subscribe button and link to pet clothes */
+
+.mid-filler {
+  display: none;
+}
+
+.pets {
+  display: grid;
+  gap: 10px;
+  text-align: center;
+  padding-bottom: 70px;
+}
+.pets img {
+  max-width: 8em;
+  border-radius: 50%;
+  margin: auto;
+}
+
+.pets h2 {
+  font-size: 1.4em;
+  max-width: 23ch;
+  margin: auto;
+}
+
 .subscribe-heading {
   max-width: 17ch;
+}
+
+/* Shipping info */
+
+.shipping {
+  display: grid;
+  gap: 10px;
+  text-align: left;
+  padding: 20px;
+  margin: auto;
+  background: #fbfbfb;
+}
+
+.shipping img {
+  max-width: 8em;
+  margin: auto;
+}
+
+.shipping h2 {
+  font-size: 1.2em;
+  margin: auto;
+  padding: 0%;
+}
+
+.shipping p {
+  margin: auto;
+  max-width: 110ch;
 }

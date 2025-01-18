@@ -1,3 +1,7 @@
+/*This is a placeholder page for the signup page, as it should be a pop-up initially*/
+
+/* Top placeholder */
+
 .back-btn {
   display: flex;
   margin: auto;
@@ -50,6 +54,8 @@ textarea {
   margin: 10px 10px 10px 0px;
   padding: 10px;
 }
+
+/* Form */
 
 form {
   display: flex;

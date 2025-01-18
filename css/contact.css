@@ -1,3 +1,9 @@
+/* Contact page with form*/
+
+/*Note: Different font usage on this site (see; label)*/
+
+/* Form */
+
 label {
   font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
 }
@@ -44,6 +50,8 @@ form {
   max-width: fit-content;
 }
 
+/* Text and image */
+
 p {
   padding: 0 40px 0 40px;
   font-size: x-large;
@@ -71,6 +79,8 @@ h2 {
   display: block;
   border-radius: 25px;
 }
+
+/* Maps*/
 
 iframe {
   border-radius: 25px;
