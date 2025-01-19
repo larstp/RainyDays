@@ -166,6 +166,10 @@ span {
   color: #000000;
 }
 
+.bottom-footer a {
+  color: #0b3a40;
+}
+
 .social-logos {
   font-size: x-large;
 }
