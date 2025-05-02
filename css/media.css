@@ -225,6 +225,10 @@
     max-height: 50em;
   }
 
+  .card a {
+    font-size: 2em;
+  }
+
   .products {
     display: block;
     margin: auto;
@@ -315,7 +319,7 @@
 
   .video-banner {
     height: 30em;
-    width: 50em;
+    width: fit-content;
     position: relative;
     margin: auto;
     overflow: hidden;
@@ -324,7 +328,7 @@
   .video-banner > video {
     object-fit: cover;
     height: 55%;
-    width: 65%;
+    width: 32.3em;
     border-radius: 50px;
     filter: brightness(70%);
   }
