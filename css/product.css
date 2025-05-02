@@ -46,29 +46,11 @@ form {
   justify-content: center;
 }
 
-ul {
-  display: none;
-  border-radius: 20px;
-}
-
 ul p {
   color: black;
   text-align: left;
   margin: 5px;
   padding: 5px;
-}
-
-label {
-  font-size: small;
-}
-
-#hamburger-menu {
-  display: none;
-}
-
-#hamburger-menu:checked ~ ul {
-  display: block;
-  background: #d9d9d9;
 }
 
 #like-btn {
@@ -311,6 +293,11 @@ path {
 }
 
 /* Rain */
+
+.rain span {
+  padding: 0%;
+}
+
 .rain {
   position: absolute;
   width: 70px;
@@ -324,13 +311,13 @@ path {
   background: #9ea1a4;
   display: block;
   float: left;
-  width: 3px;
+  width: 2px;
   height: 10px;
   margin-left: 4px;
-  border-radius: 0px 0px 6px 6px;
+  border-radius: 0px 0px 2px 2px;
 
   animation-name: drop;
-  animation-duration: 350ms;
+  animation-duration: 750ms;
   animation-iteration-count: infinite;
 }
 
@@ -391,7 +378,7 @@ path {
 }
 
 .text {
-  font-family: Helvetica, "Helvetica Neue", sans-serif;
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
   letter-spacing: 1px;
   text-align: center;
   margin-left: -43px;

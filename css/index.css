@@ -68,15 +68,12 @@
 }
 
 .container {
-  display: grid; /* Switch to grid layout */
-  grid-template-columns: repeat(
-    2,
-    fit-content(100%)
-  ); /* Two columns with dynamic sizing */
-  justify-content: center; /* Center the grid within the container */
-  gap: 10px; /* Add spacing between items */
-  max-width: 80%; /* Limit the container width */
-  margin: 50px auto; /* Center the container */
+  display: grid;
+  grid-template-columns: repeat(2, fit-content(100%));
+  justify-content: center;
+  gap: 10px;
+  max-width: 80%;
+  margin: 50px auto;
 }
 
 .card {

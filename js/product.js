@@ -32,7 +32,7 @@ async function fetchAndCreateProduct() {
     const price = document.createElement("h3");
     const discountedPrice = document.createElement("h3");
     const tags = document.createElement("p");
-
+    const addToCartButton = document.createElement("button");
     const backButton = document.createElement("button");
 
     productDiv.className = "product";
@@ -46,8 +46,31 @@ async function fetchAndCreateProduct() {
     price.className = "product-price";
     discountedPrice.className = "product-discounted-price";
     tags.className = "product-tags";
-
+    addToCartButton.className = "cta";
     backButton.className = "cta";
+
+    image.src = product.image.url;
+    image.alt = product.image.alt;
+    title.textContent = product.title;
+    price.textContent = `$${product.price}`;
+    discountedPrice.textContent = `$${product.discountedPrice}`;
+    description.textContent = product.description;
+    sizes.textContent = `Available Sizes: ${product.sizes.join(", ")}`;
+    baseColor.textContent = `Color: ${product.baseColor}`;
+    tags.textContent = `Category: ${product.tags.join(", ")}`;
+    addToCartButton.textContent = "Add to Cart";
+    backButton.textContent = "Back to store";
+
+    addToCartButton.addEventListener("click", () => {
+      const cart = JSON.parse(localStorage.getItem("cart")) || [];
+      cart.push({ id: product.id, title: product.title, price: product.price });
+      localStorage.setItem("cart", JSON.stringify(cart));
+      alert("Item added to cart!");
+    });
+
+    backButton.addEventListener("click", () => {
+      window.history.back();
+    });
 
     productDiv.appendChild(title);
     productDiv.appendChild(image);
@@ -61,27 +84,11 @@ async function fetchAndCreateProduct() {
       productDiv.appendChild(price);
     }
 
-    productDiv.appendChild(gender);
     productDiv.appendChild(sizes);
     productDiv.appendChild(baseColor);
     productDiv.appendChild(tags);
+    productDiv.appendChild(addToCartButton);
     content.appendChild(backButton);
-
-    image.src = product.image.url;
-    image.alt = product.image.alt;
-    title.textContent = product.title;
-    price.textContent = `$${product.price}`;
-    discountedPrice.textContent = `$${product.discountedPrice}`;
-    description.textContent = product.description;
-    gender.textContent = `Gender: ${product.gender}`;
-    sizes.textContent = `Sizes: ${product.sizes.join(", ")}`;
-    baseColor.textContent = `Base Color: ${product.baseColor}`;
-    tags.textContent = `Tags: ${product.tags.join(", ")}`;
-
-    backButton.textContent = "Back to store";
-    backButton.addEventListener("click", () => {
-      window.history.back();
-    });
 
     container.appendChild(productDiv);
     container.appendChild(content);
