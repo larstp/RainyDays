@@ -13,7 +13,14 @@
 }
 
 body {
-  background: black;
+  font-family: "Tittillium Web", sans-serif;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+  min-height: 100vh;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
 }
 
 h1 {
@@ -25,9 +32,13 @@ h1 {
 
 h2 {
   font-family: "Palanquin", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: large;
+  font-size: x-large;
   font-weight: 400;
   margin: 0;
+  text-align: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  max-width: 51ch;
 }
 
 h3 {
@@ -50,11 +61,6 @@ form {
   justify-content: center;
 }
 
-ul {
-  display: none;
-  border-radius: 20px;
-}
-
 ul p {
   color: black;
   text-align: left;
@@ -62,17 +68,8 @@ ul p {
   padding: 5px;
 }
 
-label {
+p {
   font-size: small;
-}
-
-#hamburger-menu {
-  display: none;
-}
-
-#hamburger-menu:checked ~ ul {
-  display: block;
-  background: #d9d9d9;
 }
 
 #like-btn {
@@ -88,6 +85,24 @@ label {
   max-width: 1000px;
   margin: 50px auto;
   text-align: center;
+  grid-template-columns: 1fr 1fr;
+}
+
+.product-discounted-price {
+  font-size: x-large;
+  color: #b60000;
+}
+
+.line-through {
+  text-decoration: line-through;
+  color: #000000;
+}
+
+.product-image {
+  max-width: 50%;
+  border-radius: 25px;
+  grid-column: 1;
+  margin: auto;
 }
 
 .product__fieldset {
@@ -126,10 +141,6 @@ label {
   padding-top: 10px;
 }
 
-.content img {
-  max-width: 80%;
-}
-
 /* Colour picker. Probably a way better way of doing this, but I don't think I should use much time on it */
 
 .colors-container {
@@ -164,8 +175,8 @@ label {
 }
 
 .product-info {
-  text-align: left;
-  padding-left: 65px;
+  display: flex;
+  padding-top: 25px;
 }
 
 .bottom {
@@ -231,4 +242,187 @@ label {
   position: relative;
   display: inline-block;
   cursor: pointer;
+}
+
+.cta-cart {
+  margin: 20px;
+  background-color: #5e2c07;
+  color: white;
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding: 10px 40px;
+  border-radius: 20px;
+  max-width: 1000px;
+  position: relative;
+  display: inline-block;
+}
+
+/* Loading animation */
+
+@import "compass/css3";
+
+.preloader {
+  position: absolute;
+  margin-left: -55px;
+  margin-top: -100px;
+  height: 110px;
+  width: 110px;
+  left: 50%;
+  top: 50%;
+}
+
+svg {
+  width: 110px;
+  height: 110px;
+}
+
+path {
+  stroke: #9ea1a4;
+  stroke-width: 0.25;
+  fill: #241e20;
+}
+
+#cloud {
+  position: relative;
+  z-index: 2;
+}
+
+#cloud path {
+  fill: #efefef;
+}
+
+#sun {
+  margin-left: -10px;
+  margin-top: 6px;
+  opacity: 0;
+  width: 60px;
+  height: 60px;
+  position: absolute;
+  left: 45px;
+  top: 15px;
+  z-index: 1;
+
+  animation-name: rotate;
+  animation-duration: 16000ms;
+  animation-iteration-count: infinite;
+  animation-timing-function: linear;
+}
+
+#sun path {
+  stroke-width: 0.18;
+  fill: #9ea1a4;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotateZ(0deg);
+  }
+
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+/* Rain */
+
+.rain span {
+  padding: 0%;
+}
+
+.rain {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  margin-top: -32px;
+  margin-left: 19px;
+}
+
+.drop {
+  opacity: 1;
+  background: #9ea1a4;
+  display: block;
+  float: left;
+  width: 2px;
+  height: 10px;
+  margin-left: 4px;
+  border-radius: 0px 0px 2px 2px;
+
+  animation-name: drop;
+  animation-duration: 750ms;
+  animation-iteration-count: infinite;
+}
+
+.drop:nth-child(1) {
+  animation-delay: -130ms;
+}
+
+.drop:nth-child(2) {
+  animation-delay: -240ms;
+}
+
+.drop:nth-child(3) {
+  animation-delay: -390ms;
+}
+
+.drop:nth-child(4) {
+  animation-delay: -525ms;
+}
+
+.drop:nth-child(5) {
+  animation-delay: -640ms;
+}
+
+.drop:nth-child(6) {
+  animation-delay: -790ms;
+}
+
+.drop:nth-child(7) {
+  animation-delay: -900ms;
+}
+
+.drop:nth-child(8) {
+  animation-delay: -1050ms;
+}
+
+.drop:nth-child(9) {
+  animation-delay: -1130ms;
+}
+
+.drop:nth-child(10) {
+  animation-delay: -1300ms;
+}
+
+@keyframes drop {
+  50% {
+    height: 45px;
+    opacity: 0;
+  }
+
+  51% {
+    opacity: 0;
+  }
+
+  100% {
+    height: 1px;
+    opacity: 0;
+  }
+}
+
+.text {
+  font-family: "Montserrat", Verdana, Geneva, Tahoma, sans-serif;
+  letter-spacing: 1px;
+  text-align: center;
+  margin-left: -43px;
+  font-weight: bold;
+  margin-top: 20px;
+  font-size: 11px;
+  color: #a0a0a0;
+  width: 200px;
+}
+
+footer {
+  margin-top: auto;
 }

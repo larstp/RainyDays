@@ -42,6 +42,10 @@ footer {
   background: #ebebeb;
 }
 
+label {
+  cursor: pointer;
+}
+
 nav {
   display: none;
   position: fixed;
@@ -64,9 +68,11 @@ nav ul {
 }
 
 #hamburger-menu:checked ~ nav {
-  display: block;
+  display: block !important;
   background: #0b3a40;
   border-radius: 0 0 10px 0;
+  visibility: visible;
+  opacity: 1;
 }
 
 .hamburger-text {

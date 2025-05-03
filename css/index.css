@@ -43,18 +43,81 @@
   padding: 0;
 }
 
-.featured {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 80%;
-  margin: 50px auto;
-  gap: 10px;
-  padding-left: 17%;
+.filter-buttons {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
 }
 
-.featured img {
-  max-width: 8em;
-  max-height: 140px;
+.filter-buttons button {
+  margin: 0 10px;
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.cta:hover {
+  background-color: #074d56;
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background-color: #5e2c07;
+  color: #fff;
+  border: 2px solid #0b3a40;
+}
+
+.container {
+  display: grid;
+  grid-template-columns: repeat(2, fit-content(100%));
+  justify-content: center;
+  gap: 10px;
+  max-width: 80%;
+  margin: 50px auto;
+}
+
+.card {
+  display: flex; /* Keep the card as a flex container */
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  box-sizing: border-box;
+  overflow: hidden;
+  transition: transform 0.3s ease;
+  padding: 10px;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+.card-image {
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  object-fit: contain;
+  max-width: 18em;
+  border-radius: 10px;
+  background-color: #fff;
+}
+
+.card-content {
+  padding-bottom: 20px;
+}
+
+.card-title {
+  position: relative;
+  left: 0;
+  padding: 0;
+  margin: auto;
+  font-size: 1.3em;
+  padding-top: 15px;
+}
+
+.card-price {
+  font-size: 1.2em;
+  color: #0b3a40;
+  margin: 0;
+  left: 0;
 }
 
 /* Keep Browsing (this part is differently placed for media over 1150px) */
