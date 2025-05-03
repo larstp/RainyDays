@@ -2,6 +2,8 @@
 
 ![Image](https://github.com/user-attachments/assets/eddd65a2-163d-438e-9603-a7bbc7e51c18)
 
+The site is currently available to see at: [larstp.github.io](https://larstp.github.io/)
+
 ## Branch 1 - HTML & CSS - Course Assignment
 
 FED1 - HTML & CSS - Course Assignment
@@ -16,11 +18,11 @@ https://www.figma.com/proto/lPZ0ajHnzM3GMUnlWwDBlF/FED1---Design---Course-Assign
 And for desktop:
 https://www.figma.com/proto/lPZ0ajHnzM3GMUnlWwDBlF/FED1---Design---Course-Assignment---Rainy-Days---Lars-Torp-Pettersen?node-id=150-143&t=KITeslxUE6Qte4m2-1
 
-The site itself is available to see at: [larstp.github.io](https://larstp.github.io/)
-
 NOTE: Some elements might not be centered correctly. This is because flexbox hates me. (also because I had to prioritise finishing the pages for the deadline) But I will continue to try and get it perfect.
 
 
 ## Branch 2 - JavaScript - Course Assignment
 
 FED1 - JavaScript 1 - Course Assignment
+
+I reused the webpage from the HTML & CSS CA to save time on... html and css (genious, I know).
