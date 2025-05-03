@@ -146,6 +146,19 @@
     font-size: 0.5em;
   }
 
+  .container a {
+    font-size: 1em;
+  }
+
+  .container {
+    display: grid;
+    grid-template-columns: repeat(3, fit-content(100%));
+    justify-content: center;
+    gap: 10px;
+    max-width: 80%;
+    margin: 50px auto;
+  }
+
   .header-text {
     color: #000000;
     text-align: left;
