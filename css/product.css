@@ -24,6 +24,10 @@ h2 {
   font-size: x-large;
   font-weight: 400;
   margin: 0;
+  text-align: left;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  max-width: 51ch;
 }
 
 h3 {
@@ -53,6 +57,10 @@ ul p {
   padding: 5px;
 }
 
+p {
+  font-size: small;
+}
+
 #like-btn {
   display: none;
 }
@@ -64,7 +72,6 @@ ul p {
 
 .product {
   max-width: 1000px;
-  display: grid;
   margin: 50px auto;
   text-align: center;
   grid-template-columns: 1fr 1fr;
@@ -81,7 +88,7 @@ ul p {
 }
 
 .product-image {
-  max-width: 80%;
+  max-width: 50%;
   border-radius: 25px;
   grid-column: 1;
   margin: auto;
@@ -157,8 +164,8 @@ ul p {
 }
 
 .product-info {
-  text-align: left;
-  padding-left: 65px;
+  display: flex;
+  padding-top: 25px;
 }
 
 .bottom {
@@ -224,6 +231,22 @@ ul p {
   position: relative;
   display: inline-block;
   cursor: pointer;
+}
+
+.cta-cart {
+  margin: 20px;
+  background-color: #5e2c07;
+  color: white;
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding: 10px 40px;
+  border-radius: 20px;
+  max-width: 1000px;
+  position: relative;
+  display: inline-block;
 }
 
 /* Loading animation */

@@ -4,7 +4,7 @@ const API_URL = "https://v2.api.noroff.dev/rainy-days";
 
 async function fetchAndCreateProduct() {
   try {
-    preloader.style.display = "block";
+    preloader.style.display = "block"; //I hope this is the right way to do loading animations :o
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
@@ -33,6 +33,7 @@ async function fetchAndCreateProduct() {
     const discountedPrice = document.createElement("h3");
     const tags = document.createElement("p");
     const addToCartButton = document.createElement("button");
+    const goToCartButton = document.createElement("button");
     const backButton = document.createElement("button");
 
     productDiv.className = "product";
@@ -47,6 +48,7 @@ async function fetchAndCreateProduct() {
     discountedPrice.className = "product-discounted-price";
     tags.className = "product-tags";
     addToCartButton.className = "cta";
+    goToCartButton.className = "cta-cart";
     backButton.className = "cta";
 
     image.src = product.image.url;
@@ -59,6 +61,7 @@ async function fetchAndCreateProduct() {
     baseColor.textContent = `Color: ${product.baseColor}`;
     tags.textContent = `Category: ${product.tags.join(", ")}`;
     addToCartButton.textContent = "Add to Cart";
+    goToCartButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Go to Cart`; // I had to get help from CoPilot for this one. Icons are mental
     backButton.textContent = "Back to store";
 
     addToCartButton.addEventListener("click", () => {
@@ -66,11 +69,17 @@ async function fetchAndCreateProduct() {
       cart.push({ id: product.id, title: product.title, price: product.price });
       localStorage.setItem("cart", JSON.stringify(cart));
       alert("Item added to cart!");
+    }); //This took me HOURS
+
+    goToCartButton.addEventListener("click", () => {
+      window.location.href = "/checkout/index.html";
     });
 
     backButton.addEventListener("click", () => {
       window.history.back();
     });
+
+    container.appendChild(content);
 
     productDiv.appendChild(title);
     productDiv.appendChild(image);
@@ -82,16 +91,17 @@ async function fetchAndCreateProduct() {
       price.classList.add("line-through");
     } else {
       productDiv.appendChild(price);
-    }
+    } // I'm proud that I managed this one!
 
     productDiv.appendChild(sizes);
     productDiv.appendChild(baseColor);
     productDiv.appendChild(tags);
+
     productDiv.appendChild(addToCartButton);
+    productDiv.appendChild(goToCartButton);
     content.appendChild(backButton);
 
     container.appendChild(productDiv);
-    container.appendChild(content);
   } catch (error) {
     console.error("Error fetching product:", error);
     container.textContent = "Oops! Couldn't find that product!";
