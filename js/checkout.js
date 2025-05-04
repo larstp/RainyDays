@@ -3,41 +3,42 @@ const preloader = document.querySelector(".preloader");
 const cartContainer = document.getElementById("cart-container");
 
 function displayCartItems() {
-  const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  cartContainer.innerHTML = "";
+  try {
+    const cart = JSON.parse(localStorage.getItem("cart")) || [];
+    cartContainer.innerHTML = "";
 
-  if (preloader) {
-    preloader.style.display = "none";
-  }
+    if (preloader) {
+      preloader.style.display = "none";
+    }
 
-  if (cart.length === 0) {
-    animatedCloud.style.display = "block"; // Holy crap this took forever and I didn't even need it... :'D
-    return;
-  }
+    if (cart.length === 0) {
+      animatedCloud.style.display = "block"; // Holy crap this took forever and I didn't even need it... :'D
+      return;
+    }
 
-  animatedCloud.style.display = "none";
+    animatedCloud.style.display = "none";
 
-  const cartList = document.createElement("ul");
-  let totalPrice = 0;
+    const cartList = document.createElement("ul");
+    let totalPrice = 0;
 
-  cart.forEach((item) => {
-    const listItem = document.createElement("li");
-    listItem.textContent = `${item.title} - $${item.price}`;
-    cartList.appendChild(listItem);
-    totalPrice += parseFloat(item.price);
-  });
+    cart.forEach((item) => {
+      const listItem = document.createElement("li");
+      listItem.textContent = `${item.title} - $${item.price}`;
+      cartList.appendChild(listItem);
+      totalPrice += parseFloat(item.price);
+    });
 
-  cartContainer.appendChild(cartList);
+    cartContainer.appendChild(cartList);
 
-  const totalPriceElement = document.createElement("p");
-  totalPriceElement.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
-  totalPriceElement.style.fontWeight = "bold";
-  cartContainer.appendChild(totalPriceElement);
+    const totalPriceElement = document.createElement("p");
+    totalPriceElement.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
+    totalPriceElement.style.fontWeight = "bold";
+    cartContainer.appendChild(totalPriceElement);
 
-  const form = document.createElement("form"); //I could NOT figure out how to do this right. I know we're not supposed to use innerHTML, but I couldn't get it to work otherwise. I tried using createElement for each element, but it was a mess.
-  form.id = "checkout-form";
-  form.className = "checkout-form";
-  form.innerHTML = `
+    const form = document.createElement("form"); //I could NOT figure out how to do this right. I know we're not supposed to use innerHTML, but I couldn't get it to work otherwise. I tried using createElement for each element, but it was a mess.
+    form.id = "checkout-form";
+    form.className = "checkout-form";
+    form.innerHTML = `
     <h2>Shipping Details</h2>
     <label for="name">Full Name</label>
     <input type="text" id="name" name="name" placeholder="John Doe" required />
@@ -57,32 +58,37 @@ function displayCartItems() {
     <label for="zip">Zip Code</label>
     <input type="text" id="zip" name="zip" placeholder="12345" required />
   `;
-  cartContainer.appendChild(form);
+    cartContainer.appendChild(form);
 
-  const buttonContainer = document.createElement("div");
-  buttonContainer.className = "button-container";
+    const buttonContainer = document.createElement("div");
+    buttonContainer.className = "button-container";
 
-  const clearCartButton = document.createElement("button");
-  clearCartButton.textContent = "Empty Cart";
-  clearCartButton.className = "cart-button";
-  clearCartButton.addEventListener("click", () => {
-    localStorage.removeItem("cart");
-    displayCartItems();
-  });
-  buttonContainer.appendChild(clearCartButton);
+    const clearCartButton = document.createElement("button");
+    clearCartButton.textContent = "Empty Cart";
+    clearCartButton.className = "cart-button";
+    clearCartButton.addEventListener("click", () => {
+      localStorage.removeItem("cart");
+      displayCartItems();
+    });
+    buttonContainer.appendChild(clearCartButton);
 
-  const checkoutButton = document.createElement("button");
-  checkoutButton.textContent = "Proceed to Checkout";
-  checkoutButton.className = "cart-button";
-  checkoutButton.addEventListener("click", () => {
-    window.location.href = "/checkout/confirmation/index.html";
-  }); //Not sure if this is the right way to do this..?
+    const checkoutButton = document.createElement("button");
+    checkoutButton.textContent = "Proceed to Checkout";
+    checkoutButton.className = "cart-button";
+    checkoutButton.addEventListener("click", () => {
+      window.location.href = "/checkout/confirmation/index.html";
+    }); //Not sure if this is the right way to do this..?
 
-  buttonContainer.appendChild(checkoutButton);
+    buttonContainer.appendChild(checkoutButton);
 
-  cartContainer.appendChild(buttonContainer);
+    cartContainer.appendChild(buttonContainer);
 
-  preloader.style.display = "none";
+    preloader.style.display = "none";
+  } catch (error) {
+    console.error("Error displaying cart items:", error);
+    cartContainer.innerHTML =
+      "<p>Something went wrong. Please try again later.</p>";
+  }
 }
 
 displayCartItems();

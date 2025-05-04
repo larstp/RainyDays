@@ -41,6 +41,8 @@ async function fetchAndCreateProducts() {
     }); // If this works I'm gonna be ECSTATIC
   } catch (error) {
     console.error("Error fetching featured items:", error);
+    container.innerHTML =
+      "<p>Failed to load products. Please try again later.</p>";
   }
 }
 

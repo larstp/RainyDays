@@ -104,7 +104,7 @@ async function fetchAndCreateProduct() {
     container.appendChild(productDiv);
   } catch (error) {
     console.error("Error fetching product:", error);
-    container.textContent = "Oops! Couldn't find that product!";
+    container.innerHTML = `<p>Oops! Couldn't find that product. Please try again later.</p>`;
   }
 }
 
