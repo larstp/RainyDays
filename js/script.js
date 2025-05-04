@@ -38,7 +38,7 @@ async function fetchAndCreateProducts() {
       );
       renderProducts(filteredProducts);
       setActiveButton(e.target);
-    });
+    }); // If this works I'm gonna be ECSTATIC
   } catch (error) {
     console.error("Error fetching featured items:", error);
   }
@@ -52,13 +52,15 @@ function renderProducts(products) {
     const image = document.createElement("img");
     const content = document.createElement("div");
     const title = document.createElement("h2");
-    const price = document.createElement("p");
+    const priceContainer = document.createElement("div");
+    const price = document.createElement("span");
     const anchor = document.createElement("a");
 
     card.className = "card";
     image.className = "card-image";
     content.className = "card-content";
     title.className = "card-title";
+    priceContainer.className = "card-price-container";
     price.className = "card-price";
     anchor.className = "card";
 
@@ -68,8 +70,21 @@ function renderProducts(products) {
     price.textContent = `$${product.price}`;
     anchor.href = `products/index.html?id=${product.id}`;
 
+    if (product.onSale) {
+      const discountedPrice = document.createElement("span");
+      discountedPrice.textContent = `$${product.discountedPrice}`;
+      discountedPrice.className = "card-discounted-price";
+
+      price.classList.add("line-through");
+
+      priceContainer.appendChild(price);
+      priceContainer.appendChild(discountedPrice);
+    } else {
+      priceContainer.appendChild(price);
+    }
+
     content.appendChild(title);
-    content.appendChild(price);
+    content.appendChild(priceContainer);
     card.appendChild(image);
     card.appendChild(content);
     anchor.appendChild(card);

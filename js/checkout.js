@@ -1,27 +1,21 @@
+const animatedCloud = document.querySelector(".animated-cloud");
 const preloader = document.querySelector(".preloader");
 const cartContainer = document.getElementById("cart-container");
 
 function displayCartItems() {
-  preloader.style.display = "block"; //Not sure if this is how you are supposed to do a loading animation :o
-
   const cart = JSON.parse(localStorage.getItem("cart")) || [];
-  const backButton = document.createElement("button");
+  cartContainer.innerHTML = "";
+
+  if (preloader) {
+    preloader.style.display = "none";
+  }
 
   if (cart.length === 0) {
-    preloader.style.display = "none";
-    cartContainer.innerHTML = "<p>Your cart is empty :(</p>";
-    cartContainer.style.textAlign = "center";
-
-    const backToStoreButton = document.createElement("button");
-    backToStoreButton.textContent = "Back to Storefront";
-    backToStoreButton.className = "cart-button";
-    backToStoreButton.addEventListener("click", () => {
-      window.location.href = "/index.html";
-    });
-
-    cartContainer.appendChild(backToStoreButton);
+    animatedCloud.style.display = "block"; // Holy crap this took forever and I didn't even need it... :'D
     return;
   }
+
+  animatedCloud.style.display = "none";
 
   const cartList = document.createElement("ul");
   let totalPrice = 0;
