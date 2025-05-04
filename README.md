@@ -26,3 +26,6 @@ NOTE: Some elements might not be centered correctly. This is because flexbox hat
 FED1 - JavaScript 1 - Course Assignment
 
 I reused the webpage from the HTML & CSS CA to save time on... html and css (genious, I know).
+
+In this assignment we added HTML dynamically using JavaScript and fetched all product information from NOROFF's API. 
+We created Product pages, shopping cart and checkout pages using JS, and implemented them on our webpage.
