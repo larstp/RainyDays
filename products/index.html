@@ -5,8 +5,8 @@
     <meta charset="UTF-8" />
     <meta name="description" content="A closer look at one of our products" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png" />
-    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png" />
+    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
+    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet" />
     <link href="../css/product.css" rel="stylesheet" />
@@ -27,7 +27,7 @@
     <header class="mobile">
       <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
       <input type="checkbox" id="hamburger-menu" />
-      <nav>
+      <nav aria-label="Mobile main navigation">
         <ul>
           <li class="current">
             <a href="../index.html" class="hamburger-text">Home</a>
@@ -47,41 +47,41 @@
       </nav>
       <a href="../index.html"
         ><img
-          src="/images/logos/RainyDays_Logo-Only.png"
+          src="images/logos/RainyDays_Logo-Only.png"
           class="logo-only"
           alt="RainyDays logo"
       /></a>
-      <a href="/checkout/index.html"
+      <a href="checkout/index.html"
         ><i class="fa-solid fa-cart-shopping"></i
       ></a>
     </header>
 
     <header class="desktop">
-      <nav>
+      <nav aria-label="Desktop main navigation">
         <ul>
           <div class="header-left">
             <li class="current">
-              <a href="/index.html" class="header-text">Home</a>
+              <a href="index.html" class="header-text">Home</a>
             </li>
-            <li><a href="/about.html" class="header-text">About</a></li>
+            <li><a href="about.html" class="header-text">About</a></li>
           </div>
           <li>
-            <a href="/index.html"
+            <a href="index.html"
               ><img
-                src="/images/logos/RainyDays_Logo-Only.png"
+                src="images/logos/RainyDays_Logo-Only.png"
                 class="header-logo"
                 alt="RainyDays logo"
             /></a>
           </li>
           <div class="header-right">
-            <li><a href="/contact.html" class="header-text">Contact</a></li>
+            <li><a href="contact.html" class="header-text">Contact</a></li>
             <li>
-              <a href="/checkout/index.html"
+              <a href="checkout/index.html"
                 ><i class="fa-solid fa-cart-shopping"></i
               ></a>
             </li>
             <li>
-              <a href="/pop-ups/user.html"><i class="fa-solid fa-user"></i></a>
+              <a href="pop-ups/user.html"><i class="fa-solid fa-user"></i></a>
             </li>
           </div>
         </ul>
@@ -199,7 +199,7 @@
 
     <footer>
       <section class="top-footer">
-        <ul class="footer-links-left">
+        <ul class="footer-links-left" aria-label="Footer left links">
           <li>
             <a href="placeholders/back.html">Shipping, Exchanges & Returns</a>
           </li>
@@ -208,19 +208,19 @@
           <li><a href="placeholders/back.html">Collaborators</a></li>
         </ul>
         <img
-          src="/images/logos/RainyDays_Logo.png"
+          src="images/logos/RainyDays_Logo.png"
           alt="RainyDays logo"
           class="logo-full"
           href="index.html"
         />
-        <ul class="footer-links-right">
+        <ul class="footer-links-right" aria-label="Footer right links">
           <li><a href="contact.html">Contact</a></li>
           <li><a href="about.html">About</a></li>
           <li><a href="index.html">Home</a></li>
           <li><a href="pop-ups/user.html">Log In</a></li>
         </ul>
       </section>
-      <section class="bottom-footer">
+      <section class="bottom-footer" aria-label="Social media links">
         <li class="social-logos">
           <a href="https://www.facebook.com/"
             ><i class="fa-brands fa-facebook"></i

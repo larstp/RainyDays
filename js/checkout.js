@@ -12,8 +12,7 @@ function displayCartItems() {
     }
 
     if (cart.length === 0) {
-      animatedCloud.style.display = "block"; // Holy crap this took forever and I didn't even need it... :'D
-      return;
+      animatedCloud.style.display = "block";
     }
 
     animatedCloud.style.display = "none";
@@ -35,7 +34,7 @@ function displayCartItems() {
     totalPriceElement.style.fontWeight = "bold";
     cartContainer.appendChild(totalPriceElement);
 
-    const form = document.createElement("form"); //I could NOT figure out how to do this right. I know we're not supposed to use innerHTML, but I couldn't get it to work otherwise. I tried using createElement for each element, but it was a mess.
+    const form = document.createElement("form");
     form.id = "checkout-form";
     form.className = "checkout-form";
     form.innerHTML = `
@@ -76,8 +75,8 @@ function displayCartItems() {
     checkoutButton.textContent = "Proceed to Checkout";
     checkoutButton.className = "cart-button";
     checkoutButton.addEventListener("click", () => {
-      window.location.href = "/checkout/confirmation/index.html";
-    }); //Not sure if this is the right way to do this..?
+      window.location.href = "checkout/confirmation/index.html";
+    });
 
     buttonContainer.appendChild(checkoutButton);
 

@@ -118,23 +118,26 @@
   color: #0b3a40;
   margin: 0;
   left: 0;
+  padding: 0;
 }
 
 .card-price-container {
   display: flex;
   gap: 0.5rem;
-  justify-content: center;
+  justify-content: left;
 }
 
 .card-price.line-through {
   text-decoration: line-through;
   color: gray;
   text-align: left;
+  padding: 0;
 }
 
 .card-discounted-price {
   color: rgb(109, 15, 15);
   font-size: 1.2em;
+  padding: 0;
 }
 
 /* Keep Browsing (this part is differently placed for media over 1150px) */

@@ -81,7 +81,7 @@
     margin: 0% 20% 10% 20%;
     background: #ebebeb;
     padding: 1em 5em;
-    border-radius: 0 0 50px 50px;
+    border-radius: 25px;
   }
 
   .about-text h2 {
@@ -167,7 +167,7 @@
   }
 
   .desktop {
-    background-image: url(/images/background/full-large2.webp);
+    background-image: url(/images/background/full-large3.webp);
     background-size: cover;
     background-position: center;
     position: sticky;
@@ -203,7 +203,7 @@
   }
 
   .desktop a {
-    font-size: 4em;
+    font-size: 3em;
   }
 
   .tagline {
@@ -300,7 +300,6 @@
 
   .mid-filler {
     display: flex;
-    max-width: 50%;
     margin: auto;
     justify-content: space-around;
   }
@@ -456,7 +455,6 @@
     margin: auto;
     max-width: 10em;
     grid-column: 2;
-    padding-left: 30px;
   }
 
   .footer-links-left {

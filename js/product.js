@@ -4,7 +4,7 @@ const API_URL = "https://v2.api.noroff.dev/rainy-days";
 
 async function fetchAndCreateProduct() {
   try {
-    preloader.style.display = "block"; //I hope this is the right way to do loading animations :o
+    preloader.style.display = "block";
 
     const params = new URLSearchParams(window.location.search);
     const id = params.get("id");
@@ -61,7 +61,7 @@ async function fetchAndCreateProduct() {
     baseColor.textContent = `Color: ${product.baseColor}`;
     tags.textContent = `Category: ${product.tags.join(", ")}`;
     addToCartButton.textContent = "Add to Cart";
-    goToCartButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Go to Cart`; // I had to get help from CoPilot for this one. Icons are mental
+    goToCartButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Go to Cart`;
     backButton.textContent = "Back to store";
 
     addToCartButton.addEventListener("click", () => {
@@ -69,10 +69,10 @@ async function fetchAndCreateProduct() {
       cart.push({ id: product.id, title: product.title, price: product.price });
       localStorage.setItem("cart", JSON.stringify(cart));
       alert("Item added to cart!");
-    }); //This took me HOURS
+    });
 
     goToCartButton.addEventListener("click", () => {
-      window.location.href = "/checkout/index.html";
+      window.location.href = "checkout/index.html";
     });
 
     backButton.addEventListener("click", () => {
@@ -91,7 +91,7 @@ async function fetchAndCreateProduct() {
       price.classList.add("line-through");
     } else {
       productDiv.appendChild(price);
-    } // I'm proud that I managed this one!
+    }
 
     productDiv.appendChild(sizes);
     productDiv.appendChild(baseColor);

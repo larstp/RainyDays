@@ -9,8 +9,6 @@ async function fetchAndCreateProducts() {
 
     renderProducts(products);
 
-    //I have no idea if this is the right way to do buttons, but this is what too many hours on StackOverflow told me...
-
     const buttons = document.querySelectorAll(".filter-buttons button");
 
     function setActiveButton(activeButton) {
@@ -38,7 +36,7 @@ async function fetchAndCreateProducts() {
       );
       renderProducts(filteredProducts);
       setActiveButton(e.target);
-    }); // If this works I'm gonna be ECSTATIC
+    });
   } catch (error) {
     console.error("Error fetching featured items:", error);
     container.innerHTML =
@@ -54,6 +52,7 @@ function renderProducts(products) {
     const image = document.createElement("img");
     const content = document.createElement("div");
     const title = document.createElement("h2");
+    const info = document.createElement("div");
     const priceContainer = document.createElement("div");
     const price = document.createElement("span");
     const anchor = document.createElement("a");
@@ -62,6 +61,7 @@ function renderProducts(products) {
     image.className = "card-image";
     content.className = "card-content";
     title.className = "card-title";
+    info.className = "card-info";
     priceContainer.className = "card-price-container";
     price.className = "card-price";
     anchor.className = "card";
@@ -71,6 +71,8 @@ function renderProducts(products) {
     title.textContent = product.title;
     price.textContent = `$${product.price}`;
     anchor.href = `products/index.html?id=${product.id}`;
+
+    info.textContent = `${product.gender} | ${product.baseColor}`;
 
     if (product.onSale) {
       const discountedPrice = document.createElement("span");
@@ -86,6 +88,7 @@ function renderProducts(products) {
     }
 
     content.appendChild(title);
+    content.appendChild(info);
     content.appendChild(priceContainer);
     card.appendChild(image);
     card.appendChild(content);
