@@ -4,9 +4,7 @@
 
 The site is currently available to see at: [larstp.github.io](https://larstp.github.io/)
 
-## Branch 1 - HTML & CSS - Course Assignment
-
-FED1 - HTML & CSS - Course Assignment
+## FED1 - OCT24 - HTML & CSS - Course Assignment
 
 I went a bit overboard on the DES1 Course Assignment that we are meant to mimic in this assignment when it came to pop-ups and graphics etc., so I'll knock this page back a few steps so I can actually finish it. (also since JavaScript is needed)
 
