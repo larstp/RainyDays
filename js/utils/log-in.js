@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     right.className = "login-modal-right";
 
     const logo = document.createElement("img");
-    logo.src = "/images/logos/RainyDays_Logo.png";
+    logo.src = "/images/logos/RainyDays_Logo.webp";
     logo.alt = "RainyDays logo";
     logo.className = "login-modal-logo";
     right.appendChild(logo);
@@ -56,7 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const submitBtn = document.createElement("button");
     submitBtn.type = "submit";
-    submitBtn.className = "pop-up-cta";
+    submitBtn.className = "cta";
     submitBtn.textContent = "Log In";
     form.appendChild(submitBtn);
     form.addEventListener("submit", (e) => {
@@ -64,8 +64,9 @@ document.addEventListener("DOMContentLoaded", function () {
       const username = form.querySelector("#login-email").value.trim();
       const password = form.querySelector("#login-password").value.trim();
       if (username && password) {
-        localStorage.setItem("rainydays_logged_in", "true");
+        localStorage.setItem("userLoggedIn", "true");
         localStorage.setItem("rainydays_username", username);
+        localStorage.removeItem("rainydays_logged_in");
         overlay.remove();
       } else {
         form.querySelector("#login-email").style.borderColor = username
@@ -94,7 +95,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const signUp = document.createElement("button");
     signUp.type = "button";
     signUp.textContent = "Sign up";
-    signUp.className = "pop-up-cta";
+    signUp.className = "cta";
     signUp.style.marginTop = "0";
     right.appendChild(signUp);
 

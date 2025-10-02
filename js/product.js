@@ -1,6 +1,6 @@
+import { fetchProductById } from "../js/api/api.js";
 const container = document.querySelector(".product-container");
 const preloader = document.querySelector(".preloader");
-const API_URL = "https://v2.api.noroff.dev/rainy-days";
 
 async function fetchAndCreateProduct() {
   try {
@@ -14,93 +14,87 @@ async function fetchAndCreateProduct() {
       return;
     }
 
-    const response = await fetch(`${API_URL}/${id}`);
-    const data = await response.json();
-    const product = data.data;
+    const product = await fetchProductById(id);
     const onSale = Boolean(product.onSale);
 
     preloader.style.display = "none";
 
     const productDiv = document.createElement("div");
-    const image = document.createElement("img");
-    const content = document.createElement("div");
-    const title = document.createElement("h1");
-    const description = document.createElement("h2");
-    const gender = document.createElement("p");
-    const sizes = document.createElement("p");
-    const baseColor = document.createElement("p");
-    const price = document.createElement("h3");
-    const discountedPrice = document.createElement("h3");
-    const tags = document.createElement("p");
-    const addToCartButton = document.createElement("button");
-    const goToCartButton = document.createElement("button");
-    const backButton = document.createElement("button");
-
     productDiv.className = "product";
-    image.className = "product-image";
-    content.className = "product-info";
-    title.className = "product-title";
-    description.className = "product-description";
-    gender.className = "product-gender";
-    sizes.className = "product-sizes";
-    baseColor.className = "product-base-color";
-    price.className = "product-price";
-    discountedPrice.className = "product-discounted-price";
-    tags.className = "product-tags";
-    addToCartButton.className = "cta";
-    goToCartButton.className = "cta-cart";
-    backButton.className = "cta";
 
+    const titleContainer = document.createElement("div");
+    titleContainer.className = "product-title-container";
+    const title = document.createElement("h1");
+    title.className = "product-title";
+    title.textContent = product.title;
+    titleContainer.appendChild(title);
+    productDiv.appendChild(titleContainer);
+
+    const flexRow = document.createElement("div");
+    flexRow.className = "product-flex-row";
+
+    const imageCol = document.createElement("div");
+    imageCol.className = "product-image-col";
+    const image = document.createElement("img");
+    image.className = "product-image";
     image.src = product.image.url;
     image.alt = product.image.alt;
-    title.textContent = product.title;
+    imageCol.appendChild(image);
+
+    const infoCol = document.createElement("div");
+    infoCol.className = "product-info-col";
+    const description = document.createElement("h2");
+    description.className = "product-description";
+    description.textContent = product.description;
+    const gender = document.createElement("p");
+    gender.className = "product-gender";
+    const sizes = document.createElement("p");
+    sizes.className = "product-sizes";
+    const baseColor = document.createElement("p");
+    baseColor.className = "product-base-color";
+    const pricesRow = document.createElement("div");
+    pricesRow.className = "product-prices-row";
+    const price = document.createElement("h3");
+    price.className = "product-price";
+    const discountedPrice = document.createElement("h3");
+    discountedPrice.className = "product-discounted-price";
+    const tags = document.createElement("p");
+    tags.className = "product-tags";
+    const addToCartButton = document.createElement("button");
+    addToCartButton.className = "cta";
     price.textContent = `$${product.price}`;
     discountedPrice.textContent = `$${product.discountedPrice}`;
-    description.textContent = product.description;
     sizes.textContent = `Available Sizes: ${product.sizes.join(", ")}`;
     baseColor.textContent = `Color: ${product.baseColor}`;
     tags.textContent = `Category: ${product.tags.join(", ")}`;
     addToCartButton.textContent = "Add to Cart";
-    goToCartButton.innerHTML = `<i class="fa-solid fa-cart-shopping"></i> Go to Cart`;
-    backButton.textContent = "Back to store";
 
     addToCartButton.addEventListener("click", () => {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
-      cart.push({ id: product.id, title: product.title, price: product.price });
+      cart.push(product.id);
       localStorage.setItem("cart", JSON.stringify(cart));
       alert("Item added to cart!");
     });
 
-    goToCartButton.addEventListener("click", () => {
-      window.location.href = "pages/cart.html";
-    });
-
-    backButton.addEventListener("click", () => {
-      window.history.back();
-    });
-
-    container.appendChild(content);
-
-    productDiv.appendChild(title);
-    productDiv.appendChild(image);
-    productDiv.appendChild(description);
-
+    infoCol.appendChild(description);
     if (onSale) {
-      productDiv.appendChild(discountedPrice);
-      productDiv.appendChild(price);
       price.classList.add("line-through");
+      pricesRow.appendChild(price);
+      pricesRow.appendChild(discountedPrice);
     } else {
-      productDiv.appendChild(price);
+      pricesRow.appendChild(price);
     }
+    infoCol.appendChild(pricesRow);
+    infoCol.appendChild(sizes);
+    infoCol.appendChild(baseColor);
+    infoCol.appendChild(tags);
+    infoCol.appendChild(addToCartButton);
 
-    productDiv.appendChild(sizes);
-    productDiv.appendChild(baseColor);
-    productDiv.appendChild(tags);
+    flexRow.appendChild(imageCol);
+    flexRow.appendChild(infoCol);
+    productDiv.appendChild(flexRow);
 
-    productDiv.appendChild(addToCartButton);
-    productDiv.appendChild(goToCartButton);
-    content.appendChild(backButton);
-
+    container.innerHTML = "";
     container.appendChild(productDiv);
   } catch (error) {
     console.error("Error fetching product:", error);

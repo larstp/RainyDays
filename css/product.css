@@ -1,13 +1,3 @@
-.back-btn {
-  display: flex;
-  margin: auto;
-  text-transform: uppercase;
-}
-
-.pop-up {
-  color: white;
-}
-
 body {
   font-family: "Tittillium Web", sans-serif;
   margin: 0;
@@ -28,7 +18,7 @@ h1 {
 
 h2 {
   font-family: "Palanquin", Verdana, Geneva, Tahoma, sans-serif;
-  font-size: x-large;
+  font-size: large;
   font-weight: 400;
   margin: 0;
   text-align: left;
@@ -43,13 +33,7 @@ h3 {
   font-weight: 400;
   margin: 0 0 10px 0;
   color: #0b3a40;
-}
-
-p,
-a {
-  color: rgb(0, 0, 0);
-  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
+  padding: 0%;
 }
 
 form {
@@ -101,145 +85,12 @@ p {
   margin: auto;
 }
 
-.product__fieldset {
-  border: #fff;
-  display: flex;
-  text-align: left;
-  flex-direction: column;
-  background: #fff;
-  padding: 20px;
-  border-radius: 25px;
-  max-width: 390px;
-  max-height: 850px;
-}
-
-.product__fieldset > * {
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-}
-
-.product-heading {
-  text-align: left;
-}
-
-.product-heading a,
-.product-heading h2 {
-  color: black;
-  font-size: medium;
-}
-
-.content {
-  text-align: center;
-}
-
-.content section {
-  padding-top: 10px;
-}
-
-.colors-container {
-  display: grid;
-  grid-template-columns: 2 1fr;
-}
-
-.colors {
-  display: block;
-  margin: none;
-  grid-column: 2;
-}
-
-.colors-one {
-  color: #6d6244;
-}
-
-.colors-two {
-  color: #486a6d;
-}
-
-.colors-three {
-  color: #4d8238;
-}
-
-.colors-four {
-  color: #7e3563;
-}
-
-.colors-five {
-  color: #7f3737;
-}
-
 .product-info {
   display: flex;
   padding-top: 25px;
 }
 
-.bottom {
-  padding: 400px 0 10px 0;
-}
-
-.select-size {
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  padding-left: 45px;
-}
-
-.select-size i {
-  font-size: x-large;
-}
-
-.cta-add {
-  background-color: #0b3a40;
-  color: white;
-  font-size: 1em;
-  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  text-wrap: nowrap;
-  padding: 10px 100px;
-  border-radius: 20px;
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
-  display: inline-block;
-}
-
-.cta-size {
-  background-color: #f0f0f0;
-  border: #b4b4b4;
-  color: rgb(0, 0, 0);
-  font-size: 1em;
-  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  text-wrap: nowrap;
-  align-items: center;
-  padding: 10px 65px;
-  border-radius: 20px;
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
-.cta-details {
-  background-color: #b4b4b4;
-  color: rgb(0, 0, 0);
-  font-size: 1em;
-  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  text-wrap: nowrap;
-  align-items: center;
-  padding: 10px 115px;
-  border-radius: 20px;
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
-  display: inline-block;
-  cursor: pointer;
-}
-
 .cta-cart {
-  margin: 20px;
   background-color: #5e2c07;
   color: white;
   font-size: 1em;

@@ -1,93 +1,169 @@
-const animatedCloud = document.querySelector(".animated-cloud");
-const preloader = document.querySelector(".preloader");
-const cartContainer = document.getElementById("cart-container");
+const main = document.querySelector("main");
 
-function displayCartItems() {
+function displayCheckoutPage() {
   try {
     const cart = JSON.parse(localStorage.getItem("cart")) || [];
-    cartContainer.innerHTML = "";
-
-    if (preloader) {
-      preloader.style.display = "none";
-    }
+    while (main.firstChild) main.removeChild(main.firstChild);
 
     if (cart.length === 0) {
-      animatedCloud.style.display = "block";
+      const emptyMsg = document.createElement("p");
+      emptyMsg.textContent = "Your cart is empty.";
+      main.appendChild(emptyMsg);
+      return;
     }
 
-    animatedCloud.style.display = "none";
+    const formsWrapper = document.createElement("div");
+    formsWrapper.className = "checkout-forms-wrapper";
 
-    const cartList = document.createElement("ul");
-    let totalPrice = 0;
+    const paymentContainer = document.createElement("div");
+    paymentContainer.className = "checkout-payment-container";
 
-    cart.forEach((item) => {
-      const listItem = document.createElement("li");
-      listItem.textContent = `${item.title} - $${item.price}`;
-      cartList.appendChild(listItem);
-      totalPrice += parseFloat(item.price);
+    const paymentHeading = document.createElement("h2");
+    paymentHeading.textContent = "Choose Payment Method";
+    paymentContainer.appendChild(paymentHeading);
+
+    const paymentOptions = [
+      { id: "card", label: "Credit/Debit Card" },
+      { id: "paypal", label: "PayPal" },
+      { id: "klarna", label: "Klarna" },
+      { id: "vipps", label: "Vipps" },
+    ];
+    const paymentForm = document.createElement("form");
+    paymentForm.className = "payment-method-form";
+    paymentOptions.forEach((opt) => {
+      const radioDiv = document.createElement("div");
+      radioDiv.className = "payment-radio-row";
+      const radio = document.createElement("input");
+      radio.type = "radio";
+      radio.id = opt.id;
+      radio.name = "payment-method";
+      radio.value = opt.id;
+      if (opt.id === "card") radio.checked = true;
+      const label = document.createElement("label");
+      label.setAttribute("for", opt.id);
+      label.textContent = opt.label;
+      radioDiv.appendChild(radio);
+      radioDiv.appendChild(label);
+      paymentForm.appendChild(radioDiv);
     });
+    paymentContainer.appendChild(paymentForm);
 
-    cartContainer.appendChild(cartList);
+    const shippingContainer = document.createElement("div");
+    shippingContainer.className = "checkout-shipping-container";
 
-    const totalPriceElement = document.createElement("p");
-    totalPriceElement.textContent = `Total Price: $${totalPrice.toFixed(2)}`;
-    totalPriceElement.style.fontWeight = "bold";
-    cartContainer.appendChild(totalPriceElement);
+    const shippingForm = document.createElement("form");
+    shippingForm.id = "checkout-form";
+    shippingForm.className = "checkout-form";
 
-    const form = document.createElement("form");
-    form.id = "checkout-form";
-    form.className = "checkout-form";
-    form.innerHTML = `
-    <h2>Shipping Details</h2>
-    <label for="name">Full Name</label>
-    <input type="text" id="name" name="name" placeholder="John Doe" required />
+    const heading = document.createElement("h2");
+    heading.textContent = "Shipping Details";
+    shippingForm.appendChild(heading);
 
-    <label for="email">Email</label>
-    <input type="email" id="email" name="email" placeholder="example@email.com" required />
+    const labelName = document.createElement("label");
+    labelName.setAttribute("for", "name");
+    labelName.textContent = "Full Name";
+    shippingForm.appendChild(labelName);
+    const inputName = document.createElement("input");
+    inputName.type = "text";
+    inputName.id = "name";
+    inputName.name = "name";
+    inputName.placeholder = "John Doe";
+    inputName.required = true;
+    shippingForm.appendChild(inputName);
 
-    <label for="phone">Phone Number</label>
-    <input type="tel" id="phone" name="phone" placeholder="123-456-7890" required />
+    const labelEmail = document.createElement("label");
+    labelEmail.setAttribute("for", "email");
+    labelEmail.textContent = "Email";
+    shippingForm.appendChild(labelEmail);
+    const inputEmail = document.createElement("input");
+    inputEmail.type = "email";
+    inputEmail.id = "email";
+    inputEmail.name = "email";
+    inputEmail.placeholder = "example@email.com";
+    inputEmail.required = true;
+    shippingForm.appendChild(inputEmail);
 
-    <label for="address">Address</label>
-    <input type="text" id="address" name="address" placeholder="123 Main Street" required />
+    const labelPhone = document.createElement("label");
+    labelPhone.setAttribute("for", "phone");
+    labelPhone.textContent = "Phone Number";
+    shippingForm.appendChild(labelPhone);
+    const inputPhone = document.createElement("input");
+    inputPhone.type = "tel";
+    inputPhone.id = "phone";
+    inputPhone.name = "phone";
+    inputPhone.placeholder = "123-456-7890";
+    inputPhone.required = true;
+    shippingForm.appendChild(inputPhone);
 
-    <label for="city">City</label>
-    <input type="text" id="city" name="city" placeholder="City" required />
+    const labelAddress = document.createElement("label");
+    labelAddress.setAttribute("for", "address");
+    labelAddress.textContent = "Address";
+    shippingForm.appendChild(labelAddress);
+    const inputAddress = document.createElement("input");
+    inputAddress.type = "text";
+    inputAddress.id = "address";
+    inputAddress.name = "address";
+    inputAddress.placeholder = "123 Main Street";
+    inputAddress.required = true;
+    shippingForm.appendChild(inputAddress);
 
-    <label for="zip">Zip Code</label>
-    <input type="text" id="zip" name="zip" placeholder="12345" required />
-  `;
-    cartContainer.appendChild(form);
+    const labelCity = document.createElement("label");
+    labelCity.setAttribute("for", "city");
+    labelCity.textContent = "City";
+    shippingForm.appendChild(labelCity);
+    const inputCity = document.createElement("input");
+    inputCity.type = "text";
+    inputCity.id = "city";
+    inputCity.name = "city";
+    inputCity.placeholder = "City";
+    inputCity.required = true;
+    shippingForm.appendChild(inputCity);
 
-    const buttonContainer = document.createElement("div");
-    buttonContainer.className = "button-container";
+    const labelZip = document.createElement("label");
+    labelZip.setAttribute("for", "zip");
+    labelZip.textContent = "Zip Code";
+    shippingForm.appendChild(labelZip);
+    const inputZip = document.createElement("input");
+    inputZip.type = "text";
+    inputZip.id = "zip";
+    inputZip.name = "zip";
+    inputZip.placeholder = "12345";
+    inputZip.required = true;
+    shippingForm.appendChild(inputZip);
 
-    const clearCartButton = document.createElement("button");
-    clearCartButton.textContent = "Empty Cart";
-    clearCartButton.className = "cart-button";
-    clearCartButton.addEventListener("click", () => {
+    shippingContainer.appendChild(shippingForm);
+
+    formsWrapper.appendChild(paymentContainer);
+    formsWrapper.appendChild(shippingContainer);
+    main.appendChild(formsWrapper);
+
+    const placeOrderBtn = document.createElement("button");
+    placeOrderBtn.textContent = "Place Order";
+    placeOrderBtn.className = "cta checkout-placeorder-btn";
+    placeOrderBtn.type = "submit";
+
+    const btnContainer = document.createElement("div");
+    btnContainer.className = "checkout-btn-container";
+    btnContainer.appendChild(placeOrderBtn);
+    main.appendChild(btnContainer);
+
+    btnContainer.addEventListener("click", (e) => {
+      if (e.target === placeOrderBtn) {
+        shippingForm.requestSubmit();
+      }
+    });
+    shippingForm.addEventListener("submit", (e) => {
+      e.preventDefault();
       localStorage.removeItem("cart");
-      displayCartItems();
+      window.location.href = "confirmation/index.html";
     });
-    buttonContainer.appendChild(clearCartButton);
-
-    const checkoutButton = document.createElement("button");
-    checkoutButton.textContent = "Proceed to Checkout";
-    checkoutButton.className = "cart-button";
-    checkoutButton.addEventListener("click", () => {
-      window.location.href = "pages/checkout.html";
-    });
-
-    buttonContainer.appendChild(checkoutButton);
-
-    cartContainer.appendChild(buttonContainer);
-
-    preloader.style.display = "none";
   } catch (error) {
-    console.error("Error displaying cart items:", error);
-    cartContainer.innerHTML =
-      "<p>Something went wrong. Please try again later.</p>";
+    console.error("Error displaying checkout page:", error);
+    while (main.firstChild) main.removeChild(main.firstChild);
+    const errorMsg = document.createElement("p");
+    errorMsg.textContent = "Something went wrong. Please try again later.";
+    main.appendChild(errorMsg);
   }
 }
 
-displayCartItems();
+displayCheckoutPage();

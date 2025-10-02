@@ -39,7 +39,7 @@ document.addEventListener("DOMContentLoaded", function () {
     right.className = "login-modal-right";
 
     const logo = document.createElement("img");
-    logo.src = "/images/logos/RainyDays_Logo.png";
+    logo.src = "/images/logos/RainyDays_Logo.webp";
     logo.alt = "RainyDays logo";
     logo.className = "login-modal-logo";
     right.appendChild(logo);
@@ -93,7 +93,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     const submitBtn = document.createElement("button");
     submitBtn.type = "submit";
-    submitBtn.className = "pop-up-cta";
+    submitBtn.className = "cta";
     submitBtn.textContent = "Create account";
     form.appendChild(submitBtn);
     form.addEventListener("submit", (e) => {
@@ -153,7 +153,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const logInBtn = document.createElement("button");
     logInBtn.type = "button";
     logInBtn.textContent = "Log in";
-    logInBtn.className = "pop-up-cta";
+    logInBtn.className = "cta";
     logInBtn.style.marginTop = "0";
     right.appendChild(logInBtn);
 

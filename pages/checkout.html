@@ -1,11 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RainyDays | Thank you for your purchase!</title>
+    <title>RainyDays | Order Confirmation & Thank You</title>
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Checkout Shopping-Cart page for RainyDays"
+      content="Thank you for your RainyDays purchase! Your order has been placed successfully. Enjoy fast, climate-neutral shipping on all outdoor apparel."
+    />
+    <meta
+      name="keywords"
+      content="RainyDays, order confirmation, thank you, purchase, checkout, shipping, outdoor apparel, success"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RainyDays" />
+    <meta
+      property="og:title"
+      content="RainyDays | Order Confirmation & Thank You"
+    />
+    <meta
+      property="og:description"
+      content="Thank you for shopping at RainyDays! Your order is confirmed and will be shipped soon. Shop more outdoor apparel anytime."
+    />
+    <meta property="og:type" content="website" />
+    <meta
+      property="og:image"
+      content="../../images/logos/RainyDays_Logo.webp"
+    />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/pages/checkout.html"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
@@ -13,7 +36,7 @@
     <link href="../../css/styles.css" rel="stylesheet" />
     <link href="../../css/utils/utilities.css" rel="stylesheet" />
     <link href="../../css/cart.css" rel="stylesheet" />
-    <link href="../../css/media.css" rel="stylesheet" />
+    <link href="../../css/global/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -26,68 +49,11 @@
     <script src="../js/checkout.js" defer></script>
     <script src="../../js/utils/log-in.js" defer></script>
   </head>
-  <body>
-    <script type="module">
-      import { insertHeader } from "../../js/utils/header.js";
-      insertHeader({ page: "checkout", rel: "../../" });
-    </script>
-    <main>
-      <p>
-        Thank you for your purchase! Your order has been placed successfully.
-      </p>
-      <a href="../../index.html" class="cart-button">Return to Home</a>
-    </main>
+  <body data-page="checkout" data-rel="../../">
+    <script type="module" src="../../js/utils/header.js"></script>
+    <main></main>
 
-    <footer>
-      <section class="top-footer">
-        <ul class="footer-links-left">
-          <li>
-            <a href="placeholders/back.html">Shipping, Exchanges & Returns</a>
-          </li>
-          <li><a href="placeholders/back.html">Privacy Policy</a></li>
-          <li><a href="placeholders/back.html">Our mission</a></li>
-          <li><a href="placeholders/back.html">Collaborators</a></li>
-        </ul>
-        <img
-          src="images/logos/RainyDays_Logo.png"
-          alt="RainyDays logo"
-          class="logo-full"
-          href="../index.html"
-        />
-        <ul class="footer-links-right">
-          <li><a href="pages/contact.html">Contact</a></li>
-          <li><a href="pages/about.html">About</a></li>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#" class="user-login-link">Log In</a></li>
-        </ul>
-      </section>
-      <section class="bottom-footer">
-        <li class="social-logos">
-          <a href="https://www.facebook.com/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.x.com/"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.reddit.com/user/"
-            ><i class="fa-brands fa-reddit"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://bsky.app/"><i class="fa-brands fa-bluesky"></i></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.instagram.com/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </li>
-      </section>
-      <div class="copyright">Copyright &copy;</div>
-    </footer>
     <script src="../js/utils/register.js" defer></script>
+    <script type="module" src="../js/utils/footer.js"></script>
   </body>
 </html>

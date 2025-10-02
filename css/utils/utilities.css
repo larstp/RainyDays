@@ -143,3 +143,23 @@ label {
   background: #0b3a40;
   color: #fff;
 }
+
+.footer-fake-link {
+  text-decoration: none;
+  cursor: pointer;
+  pointer-events: auto;
+  transition: color 0.2s;
+}
+.footer-fake-link:hover {
+  color: #5e2c07;
+  text-decoration: underline;
+}
+.footer-links-right a {
+  text-decoration: none;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.footer-links-right a:hover {
+  color: #5e2c07;
+  text-decoration: underline;
+}

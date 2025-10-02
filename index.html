@@ -1,20 +1,37 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RainyDays | Home</title>
+    <title>RainyDays | Outdoor Apparel for Every Adventure</title>
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Push your comfort zone with our top of the line outdoor apparel"
+      content="Explore the outdoors in style and comfort with RainyDays. Shop high-quality, durable rain jackets and hiking gear for all weather."
     />
+    <meta
+      name="keywords"
+      content="RainyDays, home, outdoor apparel, rain jackets, hiking gear, adventure, comfort zone, durable, weatherproof, shop"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RainyDays" />
+    <meta
+      property="og:title"
+      content="RainyDays | Outdoor Apparel for Every Adventure"
+    />
+    <meta
+      property="og:description"
+      content="Push your comfort zone with RainyDays' top of the line outdoor apparel and rain jackets. Designed for style, comfort, and durability."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="images/logos/RainyDays_Logo.webp" />
+    <meta property="og:url" content="https://yourdomain.com/index.html" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link href="css/styles.css" rel="stylesheet" />
     <link href="css/utils/utilities.css" rel="stylesheet" />
+    <link href="css/styles.css" rel="stylesheet" />
     <link href="css/index.css" rel="stylesheet" />
     <link href="css/video.css" rel="stylesheet" />
-    <link href="css/media.css" rel="stylesheet" />
+    <link href="css/global/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -24,176 +41,12 @@
       src="https://kit.fontawesome.com/3d97dafa3a.js"
       crossorigin="anonymous"
     ></script>
-    <script src="./js/script.js" defer></script>
-    <script src="js/utils/log-in.js" defer></script>
   </head>
-  <body>
-    <script type="module">
-      import { insertHeader } from "./js/utils/header.js";
-      insertHeader({ page: "home", rel: "" });
-    </script>
-    <main>
-      <section class="tagline">
-        <img
-          src="images/logos/Pushing the comfort zone.png"
-          alt="Pushing the comfort zone"
-        />
-        <h2>
-          Explore the outdoors in style and comfort. Our durable range of
-          outerwear are designed to keep you dry and protected, no matter the
-          weather.
-        </h2>
-      </section>
-      <div class="filter-buttons">
-        <button id="filter-both" class="cta active">All</button>
-        <button id="filter-male" class="cta">Men</button>
-        <button id="filter-female" class="cta">Women</button>
-      </div>
-      <div class="container" id="container"></div>
-      <section class="keep-browsing">
-        <h2>Keep Browsing</h2>
-        <p>
-          Discover more of our top of the line jackets and other hiking
-          equipment.
-        </p>
-        <a href="placeholders/back.html" class="cta">See more</a>
-      </section>
-      <section class="newsletter">
-        <div class="video-banner">
-          <video autoplay loop muted id="background-video">
-            <source src="videos/forrest.mp4" type="video/mp4" />
-            Your browser does not support HTML video.
-          </video>
-          <div class="video-banner-content">
-            <span class="subscribe-heading">Subscribe to our newsletter!</span>
-            <span class="subscribe-text"
-              >Stay up to date on all our new releases</span
-            >
-            <img
-              src="images/logos/RainyDays_Logo.png"
-              alt="RainyDays logo"
-              class="video-logo"
-            />
-            <img
-              src="images/logos/Polygon 1.png"
-              alt="Polygon"
-              class="video-background"
-            />
-            <a href="pop-ups/signup.html" class="cta__orange">Subscribe</a>
-          </div>
-        </div>
-      </section>
-      <section class="pets">
-        <h2>Get matching gear for your four legged friend!</h2>
-        <img src="images/unsplash/pet-clothes.webp" alt="Cat with a scarf" />
-        <p>Check out our stylish pet lineup</p>
-        <a href="placeholders/back.html" class="cta">See more</a>
-      </section>
-      <div class="mid-filler">
-        <section class="newsletter-desktop">
-          <div class="video-banner">
-            <video autoplay loop muted id="background-video">
-              <source src="videos/forrest.mp4" type="video/mp4" />
-              Your browser does not support HTML video.
-            </video>
-            <div class="video-banner-content">
-              <span class="subscribe-heading"
-                >Subscribe to our newsletter!</span
-              >
-              <span class="subscribe-text"
-                >Stay up to date on all our new releases</span
-              >
-              <img
-                src="images/logos/RainyDays_Logo.png"
-                alt="RainyDays logo"
-                class="video-logo"
-              />
-              <img
-                src="images/logos/Polygon 1.png"
-                alt="Polygon"
-                class="video-background"
-              />
-              <a href="pop-ups/signup.html" class="cta__orange">Subscribe</a>
-            </div>
-          </div>
-        </section>
-        <section class="pets-desktop">
-          <h2>Get matching gear for your four legged friend!</h2>
-          <img src="images/unsplash/pet-clothes.webp" alt="Cat with a scarf" />
-          <p>Check out our stylish pet lineup</p>
-          <a href="placeholders/back.html" class="cta">See more</a>
-        </section>
-      </div>
-      <section class="shipping">
-        <h2>2-5 day climate neutral shipping</h2>
-        <img
-          src="images/logos/international shipping.webp"
-          alt="International shipping"
-        />
-        <p>
-          In today’s fast-paced, globalized world, we’re committed to delivering
-          your goods swiftly and responsibly. We understand the urgency of
-          modern logistics, but we also recognize the importance of
-          environmental sustainability.
-        </p>
-        <p>
-          That’s why we’ve made climate-neutral shipping a cornerstone of our
-          business. By offsetting carbon emissions from every shipment, we
-          strive to minimize our impact on the planet without compromising on
-          speed or reliability.
-        </p>
-      </section>
-    </main>
-    <footer>
-      <section class="top-footer">
-        <ul class="footer-links-left">
-          <li>
-            <a href="placeholders/back.html">Shipping, Exchanges & Returns</a>
-          </li>
-          <li><a href="placeholders/back.html">Privacy Policy</a></li>
-          <li><a href="placeholders/back.html">Our mission</a></li>
-          <li><a href="placeholders/back.html">Collaborators</a></li>
-        </ul>
-        <img
-          src="images/logos/RainyDays_Logo.png"
-          alt="RainyDays logo"
-          class="logo-full"
-          href="index.html"
-        />
-        <ul class="footer-links-right">
-          <li><a href="pages/contact.html">Contact</a></li>
-          <li><a href="pages/about.html">About</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="*">Log In</a></li>
-        </ul>
-      </section>
-      <section class="bottom-footer">
-        <li class="social-logos">
-          <a href="https://www.facebook.com/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.x.com/"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.reddit.com/user/"
-            ><i class="fa-brands fa-reddit"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://bsky.app/"><i class="fa-brands fa-bluesky"></i></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.instagram.com/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </li>
-      </section>
-      <div class="copyright">Copyright &copy;</div>
-    </footer>
+  <body data-page="home" data-rel="">
+    <script type="module" src="js/utils/header.js"></script>
+    <script type="module" src="js/index.js"></script>
+    <script src="js/utils/log-in.js" defer></script>
     <script src="js/utils/register.js" defer></script>
+    <script type="module" src="js/utils/footer.js"></script>
   </body>
 </html>

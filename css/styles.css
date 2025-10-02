@@ -1,5 +1,3 @@
-/* Main style sheet */
-
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")
@@ -56,6 +54,7 @@ nav {
 
 nav li {
   padding-top: 30px;
+  display: flex;
 }
 
 nav ul {
@@ -231,18 +230,8 @@ button {
   padding: 40px 0 40px 0;
 }
 
-.pop-up-cta {
-  background-color: #0b3a40;
-  color: white;
-  font-size: 1em;
-  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
-  text-decoration: none;
-  text-transform: uppercase;
-  text-wrap: nowrap;
-  padding: 10px 40px;
-  border-radius: 25px;
-  max-width: 1000px;
-  margin: auto;
-  position: relative;
-  display: inline-block;
+.cta-card {
+  display: block;
+  margin: 18px auto 0 auto;
+  text-align: center;
 }

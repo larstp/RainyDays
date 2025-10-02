@@ -1,21 +1,41 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>RainyDays | Contact</title>
+    <title>Contact RainyDays | Get in Touch & Customer Support</title>
     <meta charset="UTF-8" />
     <meta
       name="description"
-      content="Contact us for more information about our products and services"
+      content="Contact RainyDays for information about our outdoor products, shipping, returns, and customer support. We're here to help!"
+    />
+    <meta
+      name="keywords"
+      content="RainyDays, contact, customer support, help, shipping, returns, outdoor products, information, services"
+    />
+    <meta name="robots" content="index, follow" />
+    <meta name="author" content="RainyDays" />
+    <meta
+      property="og:title"
+      content="Contact RainyDays | Customer Support & Info"
+    />
+    <meta
+      property="og:description"
+      content="Get in touch with RainyDays for product information, shipping, returns, and more. Our team is ready to assist you!"
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:image" content="../images/logos/RainyDays_Logo.webp" />
+    <meta
+      property="og:url"
+      content="https://yourdomain.com/pages/contact.html"
     />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
-    <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/utils/utilities.css" rel="stylesheet" />
+    <link href="../css/styles.css" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet" />
     <link href="../css/video.css" rel="stylesheet" />
     <link href="../css/contact.css" rel="stylesheet" />
-    <link href="../css/media.css" rel="stylesheet" />
+    <link href="../css/global/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <style>
@@ -27,191 +47,10 @@
     ></script>
     <script src="../js/utils/log-in.js" defer></script>
   </head>
-  <body>
-    <script type="module">
-      import { insertHeader } from "../js/utils/header.js";
-      insertHeader({ page: "contact", rel: "../" });
-    </script>
-    <main>
-      <h1>Contact us!</h1>
-      <section class="contact-container">
-        <section class="contact">
-          <form method="post">
-            <div class="contact__fieldset">
-              <section>
-                <label for="name">Full Name*</label>
-                <input type="text" id="name" name="name" />
-                <label for="email">Email*</label>
-                <input type="email" id="email" name="email" />
-                <label for="email">Phone number</label>
-                <input type="phone" id="phone" name="phone" />
-              </section>
-              <section>
-                <div class="contact__fieldset_message">
-                  <label for="message">Message</label>
-                  <textarea
-                    name="message"
-                    id="message"
-                    rows="15"
-                    cols="40"
-                  ></textarea>
-                </div>
-              </section>
-              <section>
-                <div>
-                  <input
-                    type="checkbox"
-                    name="newsletter"
-                    id="newsletter"
-                    value="newsletter"
-                  />
-                  <label for="newsletter">Sign up for our newsletter</label>
-                </div>
-              </section>
-              <section class="cta__send">
-                <a href="placeholders/back.html" class="cta">Send</a>
-              </section>
-            </div>
-          </form>
-        </section>
-        <section class="contact-text">
-          <p>Have a question about our products?</p>
-          <p>Need help with shipping or returns?</p>
-          <p>
-            Interested in collaborating with us or have a brilliant product
-            idea? We’re here to help! Our friendly and knowledgeable team is
-            always ready to assist you.
-          </p>
-          <p>
-            Whether you’re a seasoned customer or a curious newcomer, feel free
-            to reach out anytime!
-          </p>
-          <img
-            src="../images/unsplash/contact picture.webp"
-            alt="Picture of the whole team jumping for joy"
-            class="contact-image"
-          />
-        </section>
-      </section>
-      <section class="contact-text">
-        <p>
-          If you prefer a more hands-on experience, why not visit one of our
-          fantastic flagship stores?
-        </p>
-        <p class="contact-text-desktop">
-          Our store associates are passionate about our products and can help
-          you find the perfect item. You can browse our latest collections, try
-          on different styles, and get expert advice. We look forward to
-          welcoming you in-store!
-        </p>
-      </section>
-      <section class="contact-maps">
-        <div class="map-specific">
-          <iframe
-            style="filter: invert(90%)"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d26182.097799695686!2d-0.12383256841631934!3d51.50781237090624!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1736859468947!5m2!1sen!2sno"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <h2>London</h2>
-          <p>Rainydays LO 71 Cherry Court SOUTHAMPTON SO53 5PD UK</p>
-        </div>
-        <div class="map-specific">
-          <iframe
-            style="filter: invert(90%)"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d19241.000652183535!2d-3.1842683111270493!3d55.95216980496092!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1736859516230!5m2!1sen!2sno"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <h2>Edinburgh</h2>
-          <p>Rainydays EB 54 Castle Road STOCKBRIDGE S098 8LD UK</p>
-        </div>
-        <div class="map-specific">
-          <iframe
-            style="filter: invert(90%)"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d17294.737642274442!2d10.754274026662795!3d59.91193526195329!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1736859585148!5m2!1sen!2sno"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <h2>Oslo</h2>
-          <p>Rainydays OS Dronning Eufemias Gate 65 0120, Oslo NORGE</p>
-        </div>
-        <div class="map-specific">
-          <iframe
-            style="filter: invert(90%)"
-            src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d27398.709482560524!2d18.421879361467763!3d-33.922792001431596!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sno!4v1736859614983!5m2!1sen!2sno"
-            width="400"
-            height="300"
-            style="border: 0"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
-          <h2>Cape Town</h2>
-          <p>129 Long St Cape Town City Centre Cape Town 8000 South Africa</p>
-        </div>
-      </section>
-    </main>
-    <footer>
-      <section class="top-footer">
-        <ul class="footer-links-left">
-          <li><a href="shipping.html">Shipping, Exchanges & Returns</a></li>
-          <li><a href="privacy.html">Privacy Policy</a></li>
-          <li><a href="mission.html">Our mission</a></li>
-          <li><a href="collaborators.html">Collaborators</a></li>
-        </ul>
-        <img
-          src="../images/logos/RainyDays_Logo.png"
-          alt="RainyDays logo"
-          class="logo-full"
-          href="../index.html"
-        />
-        <ul class="footer-links-right">
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="../index.html">Home</a></li>
-          <li><a href="#" class="user-login-link">Log In</a></li>
-        </ul>
-      </section>
-      <section class="bottom-footer">
-        <li class="social-logos">
-          <a href="https://www.facebook.com/"
-            ><i class="fa-brands fa-facebook"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.x.com/"
-            ><i class="fa-brands fa-x-twitter"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.reddit.com/user/"
-            ><i class="fa-brands fa-reddit"></i
-          ></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://bsky.app/"><i class="fa-brands fa-bluesky"></i></a>
-        </li>
-        <li class="social-logos">
-          <a href="https://www.instagram.com/"
-            ><i class="fa-brands fa-instagram"></i
-          ></a>
-        </li>
-      </section>
-      <div class="copyright">Copyright &copy;</div>
-    </footer>
+  <body data-page="contact" data-rel="../">
+    <script type="module" src="../js/utils/header.js"></script>
+    <script src="../js/contact.js" defer></script>
     <script src="../js/utils/register.js" defer></script>
+    <script type="module" src="../js/utils/footer.js"></script>
   </body>
 </html>

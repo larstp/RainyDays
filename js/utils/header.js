@@ -66,7 +66,7 @@ export function insertHeader({ page, rel }) {
   const logoLink = document.createElement("a");
   logoLink.href = rel + "index.html";
   const logoImg = document.createElement("img");
-  logoImg.src = rel + "images/logos/RainyDays_Logo-Only.png";
+  logoImg.src = rel + "images/logos/RainyDays_Logo-Only.webp";
   logoImg.className = "logo-only";
   logoImg.alt = "RainyDays logo";
   logoLink.appendChild(logoImg);
@@ -106,7 +106,7 @@ export function insertHeader({ page, rel }) {
   const aLogo = document.createElement("a");
   aLogo.href = rel + "index.html";
   const imgLogo = document.createElement("img");
-  imgLogo.src = rel + "images/logos/RainyDays_Logo-Only.png";
+  imgLogo.src = rel + "images/logos/RainyDays_Logo-Only.webp";
   imgLogo.className = "header-logo";
   imgLogo.alt = "RainyDays logo";
   aLogo.appendChild(imgLogo);
@@ -143,4 +143,13 @@ export function insertHeader({ page, rel }) {
 
   document.body.insertBefore(desktopHeader, document.body.firstChild);
   document.body.insertBefore(mobileHeader, desktopHeader);
+}
+
+if (typeof document !== "undefined") {
+  const body = document.body;
+  const page = body?.dataset?.page;
+  const rel = body?.dataset?.rel;
+  if (page && rel !== undefined) {
+    insertHeader({ page, rel });
+  }
 }

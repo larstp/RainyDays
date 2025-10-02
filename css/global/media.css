@@ -1,57 +1,4 @@
-/* Main media page*/
-
-/*The screen size for desktop is a bit weird. Need to make better*/
-
-/*NOTE: nothing on this page directly links to any of the media query's in the "pop-up" placeholders. They have their own temporary media file (/pop-ups/pop-ups-css/pop-ups-media.css)*/
-
-@media (min-width: 400px) {
-  .product-list {
-    grid-template-columns: repeat(2, 1fr);
-  }
-}
-
 @media (min-width: 800px) {
-  .products img {
-    grid-column: -1/1;
-    margin: auto;
-  }
-
-  .products a {
-    grid-column: -1/1;
-    margin: auto;
-  }
-
-  .products h2,
-  .products h3 {
-    grid-column: 2;
-    font-size: 0.8em;
-    margin: auto;
-    padding: 0;
-  }
-
-  .products p {
-    grid-column: 2;
-    font-size: 1.1em;
-    padding-left: 15%;
-    color: #0b3a40;
-    margin-top: 0;
-    padding: 0;
-  }
-
-  .featured {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 80%;
-    margin: 50px auto;
-    gap: 10px;
-    padding-left: 17%;
-  }
-
-  .featured img {
-    max-width: 8em;
-    max-height: 140px;
-  }
-
   .keep-browsing {
     display: none;
   }
@@ -222,50 +169,16 @@
 
   .tagline h2 {
     text-align: left;
-    font-size: xx-large;
+    font-size: x-large;
     max-width: 45ch;
-  }
-
-  .featured {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    max-width: 50%;
-    padding-left: 0%;
-  }
-
-  .featured img {
-    max-width: 20em;
-    max-height: 50em;
   }
 
   .card a {
     font-size: 2em;
   }
 
-  .products {
-    display: block;
-    margin: auto;
-  }
-
   h1 {
     font-size: 3em;
-  }
-
-  .products h2 {
-    font-size: 2em;
-    color: #0b3a40;
-  }
-
-  .products h3 {
-    font-size: 1.5em;
-  }
-
-  .products p {
-    font-size: 2.2em;
-    padding-left: 30%;
-    color: #0b3a40;
-    margin-top: 0;
-    font-weight: 550;
   }
 
   .keep-browsing {
@@ -524,6 +437,80 @@
     gap: 31px;
     font-size: 0.5em;
   }
+
+  .product {
+    max-width: 1100px;
+    margin: 50px auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-title-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    margin-bottom: 32px;
+  }
+  .product-flex-row {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    justify-content: center;
+    width: 100%;
+    gap: 48px;
+  }
+  .product-image-col {
+    flex: 1 1 0;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+  }
+  .product-image {
+    max-width: 400px;
+    width: 100%;
+    height: auto;
+    border-radius: 25px;
+    margin: 0;
+  }
+  .product-info-col {
+    flex: 1 1 0;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 18px;
+    max-width: 500px;
+  }
+  .product-info-col h2 {
+    text-align: left;
+    padding: 0;
+    margin: 0 0 12px 0;
+  }
+  .product-info-col h3 {
+    margin: 0 0 8px 0;
+  }
+  .product-info-col button {
+    align-self: flex-start;
+  }
+
+  .product-sizes {
+    font-size: large;
+  }
+  .product-base-color {
+    font-size: large;
+  }
+
+  .product-tags {
+    font-size: large;
+  }
+
+  .product-prices-row {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+    gap: 18px;
+    margin-bottom: 8px;
+  }
 }
 
 @media (max-width: 600px) {
@@ -540,5 +527,19 @@
   .login-modal-left img {
     height: 120px;
     object-fit: cover;
+  }
+}
+
+@media (max-width: 900px) {
+  .checkout-forms-wrapper {
+    flex-direction: column;
+    align-items: center;
+    gap: 28px;
+  }
+  .checkout-payment-container,
+  .checkout-shipping-container {
+    max-width: 98vw;
+    min-width: 0;
+    width: 100%;
   }
 }

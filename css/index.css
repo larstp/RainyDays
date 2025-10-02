@@ -14,35 +14,6 @@
   text-align: center;
 }
 
-/* Featured Products */
-
-.products img {
-  grid-column: -1/1;
-  margin: auto;
-}
-
-.products a {
-  grid-column: -1/1;
-  margin: auto;
-}
-
-.products h2,
-.products h3 {
-  grid-column: 2;
-  font-size: 0.8em;
-  margin: auto;
-  padding: 0;
-}
-
-.products p {
-  grid-column: 2;
-  font-size: 1.1em;
-  padding-left: 15%;
-  color: #0b3a40;
-  margin-top: 0;
-  padding: 0;
-}
-
 .filter-buttons {
   display: flex;
   justify-content: center;
@@ -76,7 +47,7 @@
 }
 
 .card {
-  display: flex; /* Keep the card as a flex container */
+  display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -139,8 +110,6 @@
   padding: 0;
 }
 
-/* Keep Browsing (this part is differently placed for media over 1150px) */
-
 .keep-browsing {
   display: grid;
   padding-bottom: 70px;
@@ -164,8 +133,6 @@
 .keep-browsing-desktop {
   display: none;
 }
-
-/* Mid section with subscribe button and link to pet clothes */
 
 .mid-filler {
   display: none;
@@ -192,8 +159,6 @@
 .subscribe-heading {
   max-width: 17ch;
 }
-
-/* Shipping info */
 
 .shipping {
   display: grid;
