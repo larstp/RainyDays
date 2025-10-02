@@ -1,3 +1,27 @@
+.confirmation-popup-overlay {
+  position: fixed;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background: rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 99999;
+}
+.confirmation-popup-box {
+  background: #fff;
+  border-radius: 25px;
+  padding: 48px 36px 36px 36px;
+  box-shadow: 0 4px 32px rgba(0, 0, 0, 0.13);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  max-width: 95vw;
+  min-width: 320px;
+  text-align: center;
+}
 .cart-error-popup {
   position: fixed;
   left: 50%;

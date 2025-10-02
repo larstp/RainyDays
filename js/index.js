@@ -113,12 +113,14 @@ function insertIndexMainContent() {
       alt: "Polygon",
     })
   );
-  divBannerContent.appendChild(
-    createEl("a", "cta__orange", {
-      href: "pop-ups/signup.html",
-      textContent: "Subscribe",
-    })
-  );
+  const subscribeBtn = createEl("button", "cta__orange", {
+    type: "button",
+    textContent: "Subscribe",
+  });
+  subscribeBtn.onclick = () => {
+    window.location.href = "pop-ups/signup.html";
+  };
+  divBannerContent.appendChild(subscribeBtn);
   divBanner.appendChild(divBannerContent);
   sectionNewsletter.appendChild(divBanner);
   main.appendChild(sectionNewsletter);
@@ -182,12 +184,14 @@ function insertIndexMainContent() {
       alt: "Polygon",
     })
   );
-  divBannerContentDesk.appendChild(
-    createEl("a", "cta__orange", {
-      href: "pop-ups/signup.html",
-      textContent: "Subscribe",
-    })
-  );
+  const subscribeBtnDesk = createEl("button", "cta__orange", {
+    type: "button",
+    textContent: "Subscribe",
+  });
+  subscribeBtnDesk.onclick = () => {
+    window.location.href = "pop-ups/signup.html";
+  };
+  divBannerContentDesk.appendChild(subscribeBtnDesk);
   divBannerDesk.appendChild(divBannerContentDesk);
   sectionNewsletterDesk.appendChild(divBannerDesk);
   divMid.appendChild(sectionNewsletterDesk);

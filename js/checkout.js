@@ -68,7 +68,6 @@ function displayCheckoutPage() {
     inputName.id = "name";
     inputName.name = "name";
     inputName.placeholder = "John Doe";
-    inputName.required = true;
     shippingForm.appendChild(inputName);
 
     const labelEmail = document.createElement("label");
@@ -80,7 +79,6 @@ function displayCheckoutPage() {
     inputEmail.id = "email";
     inputEmail.name = "email";
     inputEmail.placeholder = "example@email.com";
-    inputEmail.required = true;
     shippingForm.appendChild(inputEmail);
 
     const labelPhone = document.createElement("label");
@@ -92,7 +90,6 @@ function displayCheckoutPage() {
     inputPhone.id = "phone";
     inputPhone.name = "phone";
     inputPhone.placeholder = "123-456-7890";
-    inputPhone.required = true;
     shippingForm.appendChild(inputPhone);
 
     const labelAddress = document.createElement("label");
@@ -104,7 +101,6 @@ function displayCheckoutPage() {
     inputAddress.id = "address";
     inputAddress.name = "address";
     inputAddress.placeholder = "123 Main Street";
-    inputAddress.required = true;
     shippingForm.appendChild(inputAddress);
 
     const labelCity = document.createElement("label");
@@ -116,7 +112,6 @@ function displayCheckoutPage() {
     inputCity.id = "city";
     inputCity.name = "city";
     inputCity.placeholder = "City";
-    inputCity.required = true;
     shippingForm.appendChild(inputCity);
 
     const labelZip = document.createElement("label");
@@ -128,7 +123,6 @@ function displayCheckoutPage() {
     inputZip.id = "zip";
     inputZip.name = "zip";
     inputZip.placeholder = "12345";
-    inputZip.required = true;
     shippingForm.appendChild(inputZip);
 
     shippingContainer.appendChild(shippingForm);
@@ -139,7 +133,7 @@ function displayCheckoutPage() {
 
     const placeOrderBtn = document.createElement("button");
     placeOrderBtn.textContent = "Place Order";
-    placeOrderBtn.className = "cta checkout-placeorder-btn";
+    placeOrderBtn.className = "cta";
     placeOrderBtn.type = "submit";
 
     const btnContainer = document.createElement("div");
@@ -154,9 +148,49 @@ function displayCheckoutPage() {
     });
     shippingForm.addEventListener("submit", (e) => {
       e.preventDefault();
-      localStorage.removeItem("cart");
-      window.location.href = "confirmation/index.html";
+      showConfirmationPopup();
     });
+
+    function showConfirmationPopup() {
+      const existing = document.getElementById("confirmation-popup");
+      if (existing) existing.remove();
+
+      const overlay = document.createElement("div");
+      overlay.id = "confirmation-popup";
+      overlay.className = "confirmation-popup-overlay";
+
+      const popup = document.createElement("div");
+      popup.className = "confirmation-popup-box";
+
+      const h1 = document.createElement("h1");
+      h1.textContent = "Thank you!";
+      popup.appendChild(h1);
+
+      const p1 = document.createElement("p");
+      p1.textContent =
+        "Your purchase is complete, and you will receive your clothes shortly!";
+      popup.appendChild(p1);
+
+      const p2 = document.createElement("p");
+      p2.textContent = "Happy hiking!";
+      popup.appendChild(p2);
+
+      const btn = document.createElement("button");
+      btn.className = "cta";
+      btn.textContent = "Return to Home";
+      btn.onclick = function () {
+        localStorage.removeItem("cart");
+        window.location.href = "../../index.html";
+      };
+      popup.appendChild(btn);
+
+      overlay.appendChild(popup);
+      document.body.appendChild(overlay);
+      if (document.body.lastElementChild !== overlay) {
+        document.body.removeChild(overlay);
+        document.body.appendChild(overlay);
+      }
+    }
   } catch (error) {
     console.error("Error displaying checkout page:", error);
     while (main.firstChild) main.removeChild(main.firstChild);

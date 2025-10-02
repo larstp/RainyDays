@@ -1,3 +1,22 @@
+.cta__orange {
+  background: #ff7a00;
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 12px 32px;
+  font-size: 1.1em;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.18s, color 0.18s;
+  text-decoration: none;
+  display: inline-block;
+}
+.cta__orange:hover,
+.cta__orange:focus {
+  background: #e65c00;
+  color: #fff;
+  text-decoration: none;
+}
 @font-face {
   font-family: "Montserrat";
   src: url("../fonts/Montserrat/Montserrat-VariableFont_wght.ttf")

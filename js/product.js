@@ -73,7 +73,15 @@ async function fetchAndCreateProduct() {
       const cart = JSON.parse(localStorage.getItem("cart")) || [];
       cart.push(product.id);
       localStorage.setItem("cart", JSON.stringify(cart));
-      alert("Item added to cart!");
+      const originalText = addToCartButton.textContent;
+      addToCartButton.textContent = "Added";
+      addToCartButton.disabled = true;
+      addToCartButton.classList.add("added-animation");
+      setTimeout(() => {
+        addToCartButton.textContent = originalText;
+        addToCartButton.disabled = false;
+        addToCartButton.classList.remove("added-animation");
+      }, 1000);
     });
 
     infoCol.appendChild(description);
