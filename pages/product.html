@@ -8,12 +8,14 @@
     <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png" />
     <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png" />
     <link href="../css/styles.css" rel="stylesheet" />
+    <link href="../css/utils/utilities.css" rel="stylesheet" />
     <link href="../css/index.css" rel="stylesheet" />
     <link href="../css/product.css" rel="stylesheet" />
     <link href="../css/media.css" rel="stylesheet" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <script src="/js/product.js" defer></script>
+    <script src="../js/utils/log-in.js" defer></script>
     <style>
       @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Palanquin:wght@100;200;300;400;500;600;700&family=Titillium+Web:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700&display=swap");
     </style>
@@ -24,69 +26,10 @@
   </head>
 
   <body>
-    <header class="mobile">
-      <label for="hamburger-menu"><i class="fa-solid fa-bars"></i></label>
-      <input type="checkbox" id="hamburger-menu" />
-      <nav aria-label="Mobile main navigation">
-        <ul>
-          <li class="current">
-            <a href="../index.html" class="hamburger-text">Home</a>
-          </li>
-          <li><a href="../about.html" class="hamburger-text">About</a></li>
-          <li><a href="../contact.html" class="hamburger-text">Contact</a></li>
-          <li>
-            <a href="../pop-ups/user.html" class="cta__orange">Log In</a>
-          </li>
-          <p></p>
-          <p>
-            <a href="../pop-ups/signup.html" style="color: #fff"
-              >Not a user? Become one</a
-            >
-          </p>
-        </ul>
-      </nav>
-      <a href="../index.html"
-        ><img
-          src="images/logos/RainyDays_Logo-Only.png"
-          class="logo-only"
-          alt="RainyDays logo"
-      /></a>
-      <a href="checkout/index.html"
-        ><i class="fa-solid fa-cart-shopping"></i
-      ></a>
-    </header>
-
-    <header class="desktop">
-      <nav aria-label="Desktop main navigation">
-        <ul>
-          <div class="header-left">
-            <li class="current">
-              <a href="index.html" class="header-text">Home</a>
-            </li>
-            <li><a href="about.html" class="header-text">About</a></li>
-          </div>
-          <li>
-            <a href="index.html"
-              ><img
-                src="images/logos/RainyDays_Logo-Only.png"
-                class="header-logo"
-                alt="RainyDays logo"
-            /></a>
-          </li>
-          <div class="header-right">
-            <li><a href="contact.html" class="header-text">Contact</a></li>
-            <li>
-              <a href="checkout/index.html"
-                ><i class="fa-solid fa-cart-shopping"></i
-              ></a>
-            </li>
-            <li>
-              <a href="pop-ups/user.html"><i class="fa-solid fa-user"></i></a>
-            </li>
-          </div>
-        </ul>
-      </nav>
-    </header>
+    <script type="module">
+      import { insertHeader } from "../js/utils/header.js";
+      insertHeader({ page: "product", rel: "../" });
+    </script>
 
     <section class="content-hero">
       <div class="preloader" style="opacity: 1">
@@ -211,13 +154,13 @@
           src="images/logos/RainyDays_Logo.png"
           alt="RainyDays logo"
           class="logo-full"
-          href="index.html"
+          href="../index.html"
         />
         <ul class="footer-links-right" aria-label="Footer right links">
-          <li><a href="contact.html">Contact</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="index.html">Home</a></li>
-          <li><a href="pop-ups/user.html">Log In</a></li>
+          <li><a href="pages/contact.html">Contact</a></li>
+          <li><a href="pages/about.html">About</a></li>
+          <li><a href="../index.html">Home</a></li>
+          <li><a href="#" class="user-login-link">Log In</a></li>
         </ul>
       </section>
       <section class="bottom-footer" aria-label="Social media links">
@@ -247,5 +190,6 @@
       </section>
       <div class="copyright">Copyright &copy;</div>
     </footer>
+    <script src="../js/utils/register.js" defer></script>
   </body>
 </html>

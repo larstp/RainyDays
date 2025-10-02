@@ -75,7 +75,7 @@ function displayCartItems() {
     checkoutButton.textContent = "Proceed to Checkout";
     checkoutButton.className = "cart-button";
     checkoutButton.addEventListener("click", () => {
-      window.location.href = "checkout/confirmation/index.html";
+      window.location.href = "pages/checkout.html";
     });
 
     buttonContainer.appendChild(checkoutButton);

@@ -64,7 +64,6 @@
 .filter-buttons button.active {
   background-color: #5e2c07;
   color: #fff;
-  border: 2px solid #0b3a40;
 }
 
 .container {

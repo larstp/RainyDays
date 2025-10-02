@@ -1,7 +1,3 @@
-/*  This page should be for all product related settings, but currently it only references to the specific product page (pop-ups) and not anything i index.html*/
-
-/* Top placeholder */
-
 .back-btn {
   display: flex;
   margin: auto;
@@ -141,8 +137,6 @@ p {
   padding-top: 10px;
 }
 
-/* Colour picker. Probably a way better way of doing this, but I don't think I should use much time on it */
-
 .colors-container {
   display: grid;
   grid-template-columns: 2 1fr;
@@ -260,8 +254,6 @@ p {
   display: inline-block;
 }
 
-/* Loading animation */
-
 @import "compass/css3";
 
 .preloader {
@@ -325,8 +317,6 @@ path {
     transform: rotateZ(360deg);
   }
 }
-
-/* Rain */
 
 .rain span {
   padding: 0%;

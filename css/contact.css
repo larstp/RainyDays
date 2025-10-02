@@ -44,6 +44,24 @@ form {
   flex-direction: column;
 }
 
+.contact__fieldset_message {
+  display: flex;
+  flex-direction: column;
+}
+
+form {
+  width: 100%;
+  max-width: 500px;
+  min-width: 300px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.contact__fieldset {
+  width: 100%;
+  box-sizing: border-box;
+}
+
 .contact a {
   display: block;
   text-align: center;

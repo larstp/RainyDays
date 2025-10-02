@@ -72,7 +72,7 @@ async function fetchAndCreateProduct() {
     });
 
     goToCartButton.addEventListener("click", () => {
-      window.location.href = "checkout/index.html";
+      window.location.href = "pages/cart.html";
     });
 
     backButton.addEventListener("click", () => {

@@ -185,6 +185,16 @@ span {
   font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
 }
 
+button {
+  border: none;
+  background: none;
+  box-shadow: none;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  cursor: pointer;
+}
+
 .cta {
   background-color: #0b3a40;
   color: white;
@@ -219,4 +229,20 @@ span {
 
 .cta__send {
   padding: 40px 0 40px 0;
+}
+
+.pop-up-cta {
+  background-color: #0b3a40;
+  color: white;
+  font-size: 1em;
+  font-family: "Tittillium Web", Verdana, Geneva, Tahoma, sans-serif;
+  text-decoration: none;
+  text-transform: uppercase;
+  text-wrap: nowrap;
+  padding: 10px 40px;
+  border-radius: 25px;
+  max-width: 1000px;
+  margin: auto;
+  position: relative;
+  display: inline-block;
 }

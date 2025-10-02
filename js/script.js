@@ -70,7 +70,7 @@ function renderProducts(products) {
     image.alt = product.image.alt;
     title.textContent = product.title;
     price.textContent = `$${product.price}`;
-    anchor.href = `products/index.html?id=${product.id}`;
+    anchor.href = `pages/product.html?id=${product.id}`;
 
     info.textContent = `${product.gender} | ${product.baseColor}`;
 
