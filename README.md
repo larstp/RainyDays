@@ -25,7 +25,6 @@ The site is designed to be visually appealing, robust, and easy to maintain, wit
 - HTML5, CSS3
 - JavaScript (ES6 modules)
 - [Figma](#figma)
-- GitHub Projects (planning)
 - NOROFF RainyDays API
 
 ## Getting Started
