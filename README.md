@@ -69,7 +69,7 @@ No build steps required. All code is static and client-side. Just open the site 
 
 ## Figma
 
-Here are my Figma prototypes. 
+Here's my Figma prototypes. 
 Note: Because of the animation (which is not included in the live website yet) you might have to reload the file one time so the images gets loaded correctly.
 <table>
   <tr>
@@ -81,6 +81,7 @@ Note: Because of the animation (which is not included in the live website yet) y
     <td><a href="https://www.figma.com/proto/lPZ0ajHnzM3GMUnlWwDBlF/FED1---Design---Course-Assignment---Rainy-Days---Lars-Torp-Pettersen?node-id=150-143&t=YwG63Lt6Q5ejZ6Vu-1">View Desktop Prototype</a></td>
   </tr>
 </table>
+
 
 Note: Style guide was not part of this assignment, so is not included.
 
