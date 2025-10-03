@@ -18,7 +18,7 @@ document.addEventListener("DOMContentLoaded", function () {
     const left = document.createElement("div");
     left.className = "login-modal-left";
     const img = document.createElement("img");
-    img.src = "/images/unsplash/login-left.webp";
+    img.src = "/RainyDays/images/unsplash/login-left.webp";
     img.alt = "Login visual";
     left.appendChild(img);
 
@@ -26,7 +26,7 @@ document.addEventListener("DOMContentLoaded", function () {
     right.className = "login-modal-right";
 
     const logo = document.createElement("img");
-    logo.src = "/images/logos/RainyDays_Logo.webp";
+    logo.src = "/RainyDays/images/logos/RainyDays_Logo.webp";
     logo.alt = "RainyDays logo";
     logo.className = "login-modal-logo";
     right.appendChild(logo);

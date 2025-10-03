@@ -114,7 +114,7 @@
   }
 
   .desktop {
-    background-image: url(../../images/background/full-large3.webp);
+    background-image: url(/RainyDays/images/background/full-large3.webp);
     background-size: cover;
     background-position: center;
     position: sticky;
