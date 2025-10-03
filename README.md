@@ -69,6 +69,8 @@ No build steps required. All code is static and client-side. Just open the site 
 
 ## Figma
 
+Here are my Figma prototypes. 
+Note: Because of the animation (which is not included in the live website yet) you might have to reload the file one time so the images gets loaded correctly.
 <table>
   <tr>
     <th>Mobile Prototype</th>
