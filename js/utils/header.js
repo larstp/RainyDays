@@ -1,3 +1,11 @@
+[
+  "/RainyDays/images/unsplash/login-left.webp",
+  "/RainyDays/images/unsplash/signup-left.webp",
+  "/RainyDays/images/logos/RainyDays_Logo.webp",
+].forEach((src) => {
+  const img = new Image();
+  img.src = src;
+});
 export function insertHeader({ page, rel }) {
   const mobileHeader = document.createElement("header");
   mobileHeader.className = "mobile";
