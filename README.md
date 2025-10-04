@@ -6,6 +6,8 @@
 
 A modern, responsive e-commerce site for outdoor jackets, built as a course assignment for the Noroff FED1 OCT24FT HTML & CSS course as well as the JS1 course. RainyDays lets users browse products, view details, register (mocked), log in (mocked), manage a cart, and complete a mock checkout process. The site is fully static, API-driven, and designed for accessibility and performance.
 
+## Contents
+
 <details>
    <summary>Table of Contents</summary>
 
