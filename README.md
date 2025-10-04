@@ -6,6 +6,25 @@
 
 A modern, responsive e-commerce site for outdoor jackets, built as a course assignment for the Noroff FED1 OCT24FT HTML & CSS course as well as the JS1 course. RainyDays lets users browse products, view details, register (mocked), log in (mocked), manage a cart, and complete a mock checkout process. The site is fully static, API-driven, and designed for accessibility and performance.
 
+<details>
+   <summary>Table of Contents</summary>
+
+- [Description](#description)
+- [Built With](#built-with)
+- [Getting Started](#getting-started)
+  - [Installing](#installing)
+  - [Running](#running)
+- [Features](#features)
+- [Folder Structure](#folder-structure)
+- [Figma](#figma)
+- [API Usage](#api-usage)
+- [Accessibility & SEO](#accessibility--seo)
+- [Known Issues / Limitations](#known-issues--limitations)
+- [Credits](#credits)
+- [Contact](#contact)
+
+</details>
+
 ## Description
 
 RainyDays is a simulated e-commerce web application focused on outdoor apparel. The project demonstrates skills in:
@@ -68,8 +87,9 @@ No build steps required. All code is static and client-side. Just open the site 
 
 ## Figma
 
-Here's my Figma prototypes. 
+Here's my Figma prototypes.
 Note: Because of the animation (which is not included in the live website yet) you might have to reload the file one time so the images gets loaded correctly.
+
 <table>
   <tr>
     <th>Mobile Prototype</th>
@@ -80,7 +100,6 @@ Note: Because of the animation (which is not included in the live website yet) y
     <td><a href="https://www.figma.com/proto/lPZ0ajHnzM3GMUnlWwDBlF/FED1---Design---Course-Assignment---Rainy-Days---Lars-Torp-Pettersen?node-id=150-143&t=YwG63Lt6Q5ejZ6Vu-1">View Desktop Prototype</a></td>
   </tr>
 </table>
-
 
 Note: Style guide was not part of this assignment, so is not included.
 
